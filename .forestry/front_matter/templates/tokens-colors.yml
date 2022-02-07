@@ -72,31 +72,31 @@ fields:
     default: "#E5F1F8"
   - type: color
     name: white
-    label: white
+    label: White
     config:
       color_format: Hex
     default: "#ffffff"
   - type: color
     name: grey
-    label: grey
+    label: Grey
     config:
       color_format: Hex
     default: "#CDCDCD"
   - type: color
     name: grey-light
-    label: grey
+    label: Grey Light
     config:
       color_format: Hex
     default: "#F4F4F4"
   - type: color
     name: black
-    label: black
+    label: Black
     config:
       color_format: Hex
     default: "#222222"
   - type: color
     name: slate
-    label: slate
+    label: Slate
     config:
       color_format: Hex
     default: "#404040"
