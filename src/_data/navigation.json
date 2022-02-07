@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "text": "Who We Are",
+      "url": "/who-we-are",
+      "external": false
+    },
+    {
+      "text": "Services",
+      "url": "/services",
+      "external": false
+    },
+    {
+      "text": "Resources",
+      "url": "/resources",
+      "external": false
+    },
+    {
+      "text": "Contact",
+      "url": "/contact",
+      "external": false
+    },
+    {
+      "text": "Style Guide",
+      "url": "/styleguide",
+      "external": true
+    }
+  ]
+}

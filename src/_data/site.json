@@ -1,0 +1,12 @@
+{
+  "name": "Armstrong Hearing",
+  "shortDesc": "",
+  "url": "http://localhost:8080",
+  "authorEmail": "",
+  "authorHandle": "",
+  "authorName": "",
+  "enableThirdPartyComments": false,
+  "maxPostsPerPage": 5,
+  "paymentPointer": "",
+  "faviconPath": "/images/favicon.png"
+}

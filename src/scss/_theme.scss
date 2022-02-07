@@ -1,0 +1,77 @@
+:root {
+  // Pull the tokens and generate custom props
+  @each $color in $colors {
+     #{'--color-' + nth($color, 1)}: #{nth($color, 2)};
+  }
+
+  // global variables
+  --theme-box-shadow: #{0 16px 24px 2px rgba(29,17,51,.04),0 6px 32px 4px rgba(9,32,77,.12),0 8px 12px -5px rgba(29,17,51,.12)};
+
+
+  // Set theme aliases
+  --color-mode: 'light';
+  --color-bg: #{get-color(white)};
+  --color-bg-glare: #{get-color(white)};
+  --color-text: #{get-color(black)};
+  --color-text-glare: #{get-color(black)};
+  --color-selection-text: #{get-color(white)};
+  --color-selection-bg: #{get-color(black)};
+  --color-stroke: #{get-color(grey)};
+  --color-action-bg: #{get-color('primary')};
+  --color-action-text: #{get-color(white)};
+  --color-theme-primary: #{get-color('primary')};
+  --color-theme-primary-glare: #{get-color('primary-light')};
+  --color-theme-highlight: #{get-color('primary')};
+  --color-theme-highlight-block: #{get-color('primary-light')};
+
+  //for dark mode toggle button
+  --color-theme-toggle-icon: #{get-color(white)};
+  --color-theme-toggle-bg: var(--color-action-bg);
+
+    // nav
+  --color-nav-menu-text: #{get-color(black)};
+  --color-nav-menu-bg: #{get-color(white)};
+  --color-nav-active-accent: #{get-color('primary')};
+  
+}
+
+@include dark-mode() {
+  --color-bg: #{get-color(black)};
+  --color-bg-glare: #{get-color('slate')};
+  --color-text: #{get-color(white)};
+  --color-selection-text: #{get-color(black)};
+  --color-selection-bg: #{get-color(white)};
+  --color-stroke: #{get-color('slate')};
+  --color-theme-primary: #{lighten(get-color('primary'), 50%)};
+  --color-theme-primary-glare: #{lighten(get-color('primary-light'), 50%)};
+  --color-action-bg: var(--color-theme-primary-glare);
+  --color-action-text: #{get-color(black)};
+  --color-theme-highlight: #{get-color('primary')};
+  --color-theme-highlight-block: #{get-color('slate')};
+  --color-theme-feature-text: #{get-color(white)};
+
+  // for dark mode toggle button
+  --color-theme-toggle-icon: #{get-color(white)};
+  --color-theme-toggle-bg: #{get-color('primary')};
+
+  // nav
+  --color-nav-menu-text: #{get-color(white)};
+  --color-nav-menu-bg: #{get-color(white)};
+  --color-nav-active-accent: #{get-color('primary')};
+    
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+main {
+  overflow: hidden;
+}
+
+::selection {
+  color: var(--color-selection-text);
+  background-color: var(--color-selection-bg);
+}
+

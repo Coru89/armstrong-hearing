@@ -1,0 +1,23 @@
+.video-player {
+  padding-top: 56.25%;
+  position: relative;
+
+  > iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  // If it’s bleeding out in a post, it needs more padding
+  .post & {
+    padding-top: 63%;
+  }
+
+  @include media-query('md') {
+    .post & {
+      padding-top: 66%;
+    }
+  }
+}

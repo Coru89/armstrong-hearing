@@ -1,0 +1,21 @@
+@import 'tokens';
+
+$breakpoints: map-get($tokens, 'breakpoints');
+$breakpoints-config: (
+   'sm': '(min-width: 36em)',
+   'md': '(min-width: 48em)',
+   'lg': '(min-width: 62em)',
+   'xl': '(min-width: 75em)',
+   'xxl': '(min-width: 87.5rem)'
+);
+// /**
+//  * METRICS
+//  * Various misc metrics to use around the site
+//  */
+$metrics: (
+   'panel-container': 82rem
+);
+$colors: map-get($tokens, 'colors');
+$font-size-scale: map-get($tokens, 'font-size-scale');
+$fonts: map-get($tokens, 'fonts');
+$spacing-size-scale: map-get($tokens, 'spacing-size-scale');

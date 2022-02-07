@@ -1,0 +1,52 @@
+.site-head {
+  padding: get-size(base);
+
+  &__wrapper {
+    @include panel-container;
+  }
+
+  &__logo {
+    height: 35px;
+    width: auto;
+
+    &--dark {
+      display: none;
+    }
+  }
+
+  &__site-name {
+    line-height: 0;
+    padding: get-size(base) get-size(base) get-size(base) 0;
+  }
+
+  @include dark-mode {
+    .site-head__logo {
+      display: none;
+    }
+  
+    .site-head__logo--dark {
+      display: block;
+    }
+  }
+
+  &__inner {
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @include media-query(md) {
+      display: flex;
+    }
+  }
+}
+
+
+@include dark-mode {
+  .site-head__logo {
+    display: none;
+  }
+
+  .site-head__logo--dark {
+    display: block;
+  }
+}

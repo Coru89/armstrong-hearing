@@ -1,0 +1,48 @@
+.site-foot {
+  // Reverse whatever the theme colors are
+  background: var(--color-bg-glare);
+  border-top: 1px solid var(--color-stroke);
+  color: var(--color-text);
+  padding: get-size(700) 0 get-size(900) 0;
+
+  &__wrapper {
+    @include panel-container;
+  }
+
+  &__inner {
+    align-items: flex-start;
+    //align-start: flex-start;
+    justify-content: space-between;
+
+    @include media-query(md) {
+      display: flex;
+    }
+  }
+
+  &__details {
+    --flow-space: 1em;
+    max-width: 40ch;
+
+    > * + * {
+      margin-top: 1em;
+      margin-top: var(--flow-space);
+    }
+
+    h2 {
+      font-family: get-font(base);
+      font-size: get-font-size(600);
+    }
+  }
+
+  a {
+    color: currentColor;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__credit {
+    text-align: center;
+  }
+}
