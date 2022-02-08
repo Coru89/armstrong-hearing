@@ -1,35 +1,27 @@
 <footer role="contentinfo" class="site-foot">
   <div class="site-foot__wrapper">
     <div class="site-foot__inner">
-      {# {% if site.shortDesc %}
-        <div>
-          <article class="site-foot__details">
-            <h2 class="font-base text-600">{{ site.name }}</h2>
-            {{ site.shortDesc | markdownFilter | safe }}
-          </article>
-        </div>
-      {% endif %} #}
 
-      <ul class="social-icons__list">
-        <li class="social-icons__item">
-          <a href="#">
-            {% include "icons/glassdoor.svg" %}
-          </a>
-        </li>
-        <li class="social-icons__item">
-          <a href="#">
-            {% include "icons/linkedin.svg" %}
-          </a>
-        </li>
-        <li class="social-icons__item">
-          <a href="#">
+      <div class="site-foot__row">
+        <ul class="social-icons__list">
+          <li class="social-icons__item">
+            <a href="#">
+              {% include "icons/glassdoor.svg" %}
+            </a>
+          </li>
+          <li class="social-icons__item">
+            <a href="#">
+              {% include "icons/linkedin.svg" %}
+            </a>
+          </li>
+          <li class="social-icons__item">
             {% include "icons/youtube.svg" %}
           </a>
         </li>
         <li class="social-icons__item">
           <a href="#">
             {% include "icons/twitter.svg" %}
-          </a>      
+          </a>
         </li>
         <li class="social-icons__item">
           <a href="#">
@@ -38,5 +30,18 @@
         </li>
       </ul>
     </div>
+
+    <div class="site-foot__row">
+      <div class="copyright rte">
+        <p>Copyright ©<span id="copyright-year"></span> Armstrong Audiology & Hearing Aid Clinic. All rights reserved.</p>
+        <script>
+          document
+            .getElementById('copyright-year')
+            .innerText = new Date().getFullYear();
+        </script>
+      </div>
+    </div>
+
   </div>
+</div>
 </footer>

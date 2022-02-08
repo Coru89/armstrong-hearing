@@ -20,28 +20,28 @@
               {% include "icons/arrow.svg" %}
             {% endif %}
           </a>
-            {% if item.items %}
-              <ul class="nav__sublist">
-                {% for item in item.items %}
-                    {% set relAttribute = '' %}
-                    {% set currentAttribute = '' %}
-                    {% set currentClass = '' %}
+          {% if item.items %}
+            <ul class="nav__sublist">
+              {% for item in item.items %}
+                {% set relAttribute = '' %}
+                {% set currentAttribute = '' %}
+                {% set currentClass = '' %}
 
-                    {% if item.rel %}
-                      {% set relAttribute = ' rel="' + item.rel + '"' %}
-                    {% endif %}
+                {% if item.rel %}
+                  {% set relAttribute = ' rel="' + item.rel + '"' %}
+                {% endif %}
 
-                    {% if page.url == (item.url + '/') %}
-                      {% set currentAttribute = ' aria-current="page"' %}
-                      {% set currentClass = 'nav__item--active' %}
-                    {% endif %}
+                {% if page.url == (item.url + '/') %}
+                  {% set currentAttribute = ' aria-current="page"' %}
+                  {% set currentClass = 'nav__item--active' %}
+                {% endif %}
 
-                  <li class="nav__item nav__item-secondary {{ currentClass | safe }}">
-                    <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-           {% endif %}
+                <li class="nav__item nav__item-secondary {{ currentClass | safe }}">
+                  <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>

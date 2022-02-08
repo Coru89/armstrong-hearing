@@ -1,8 +1,8 @@
 .site-foot {
   // Reverse whatever the theme colors are
-  background: var(--color-bg-glare);
+  background: var(--color-bg-light);
   border-top: 1px solid var(--color-stroke);
-  color: var(--color-text);
+  color: var(--color-white);
   padding: get-size(700) 0 get-size(900) 0;
 
   &__wrapper {
@@ -10,9 +10,9 @@
   }
 
   &__inner {
-    align-items: flex-start;
-    //align-start: flex-start;
+    align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 
     @include media-query(md) {
       display: flex;
@@ -44,5 +44,19 @@
 
   &__credit {
     text-align: center;
+  }
+}
+
+
+.social-icons {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 0.5rem;
+    }
   }
 }

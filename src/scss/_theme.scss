@@ -11,7 +11,7 @@
   // Set theme aliases
   --color-mode: 'light';
   --color-bg: #{get-color(white)};
-  --color-bg-glare: #{get-color(white)};
+  --color-bg-light: #{get-color('primary-light')};
   --color-text: #{get-color(black)};
   --color-text-glare: #{get-color(black)};
   --color-selection-text: #{get-color(white)};
@@ -20,7 +20,7 @@
   --color-action-bg: #{get-color('primary')};
   --color-action-text: #{get-color(white)};
   --color-theme-primary: #{get-color('primary')};
-  --color-theme-primary-glare: #{get-color('primary-light')};
+  --color-theme-primary-light: #{get-color('primary-light')};
   --color-theme-highlight: #{get-color('primary')};
   --color-theme-highlight-block: #{get-color('primary-light')};
 
@@ -37,14 +37,14 @@
 
 @include dark-mode() {
   --color-bg: #{get-color(black)};
-  --color-bg-glare: #{get-color('slate')};
+  --color-bg-light: #{get-color('slate')};
   --color-text: #{get-color(white)};
   --color-selection-text: #{get-color(black)};
   --color-selection-bg: #{get-color(white)};
   --color-stroke: #{get-color('slate')};
   --color-theme-primary: #{lighten(get-color('primary'), 50%)};
-  --color-theme-primary-glare: #{lighten(get-color('primary-light'), 50%)};
-  --color-action-bg: var(--color-theme-primary-glare);
+  --color-theme-primary-light: #{lighten(get-color('primary-light'), 50%)};
+  --color-action-bg: var(--color-theme-primary-light);
   --color-action-text: #{get-color(black)};
   --color-theme-highlight: #{get-color('primary')};
   --color-theme-highlight-block: #{get-color('slate')};
