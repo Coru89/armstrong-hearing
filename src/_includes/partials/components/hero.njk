@@ -1,0 +1,12 @@
+<header class="hero">
+	{% image "./src/images/banner.png", "photo of my cat", "100vw", ['576', '600', '768', '992', '1280', '1920', '2560'] %}
+
+	<div class="hero__wrapper">
+		<h1 class="hero__heading{{ ' hero__heading--compact' if page.url === '/' }}">{{ heroHeading | safe }}</h1>
+		{% if heroSummary %}
+		<div class="hero__summary">{{ heroSummary | safe }}</div>
+		
+		{% endif %}
+	</div>
+</header>
+

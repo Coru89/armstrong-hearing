@@ -14,7 +14,49 @@ const parseTransform = require('./src/transforms/parse-transform.js');
 // Import data files
 const site = require('./src/_data/site.json');
 
+const Image = require("@11ty/eleventy-img");
+let Nunjucks = require("nunjucks");
+
 module.exports = function(config) {
+  config.addShortcode('image', (src, alt, sizes, widths) => {
+    let options = {
+      widths: widths,
+      formats: ['webp', 'jpeg'],
+    };
+
+    // generate images, while this is async we don’t wait
+    Image(src, options);
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: 'lazy'
+    };
+    // get metadata even the images are not fully generated
+    let metadata = Image.statsSync(src, options);
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
+  config.addShortcode('user', function (name, twitterUsername) {
+    return `<div class="user">
+      <div class="user_name">${name}</div>
+      <div class="user_twitter">@${twitterUsername}</div>
+      </div>`;
+  });
+
+  // let nunjucksEnvironment = new Nunjucks.Environment(
+  //   new Nunjucks.FileSystemLoader("_includes")
+  // );
+
+  // Nunjucks.precompile('src/_includes',
+  //   { 
+  //     env: nunjucksEnvironment,
+  //     force: 1
+  //   }
+  // );
+
+  // config.setLibrary("njk", nunjucksEnvironment);
+
   // Filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('markdownFilter', markdownFilter);
@@ -33,10 +75,12 @@ module.exports = function(config) {
   // Passthrough copy
   config.addPassthroughCopy('src/fonts');
   config.addPassthroughCopy('src/images');
+  config.addPassthroughCopy('img');
   config.addPassthroughCopy('src/js');
   config.addPassthroughCopy('src/admin/config.yml');
   config.addPassthroughCopy('src/admin/previews.js');
-  config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
+  // config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
+  config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks.js');
   config.addPassthroughCopy('src/robots.txt');
 
   const now = new Date();
@@ -96,11 +140,13 @@ module.exports = function(config) {
   });
 
   return {
+    markdownTemplateEngine: 'njk',
+    teplateFormats: ['html', 'njk', 'md', 'js'],
     dir: {
       input: 'src',
-      output: 'dist',
-    },
-    markdownTemplateEngine: "njk",
-    passthroughFileCopy: true
+      includes: '_includes',
+      //data: '_data',
+      output: 'dist'
+    }
   };
 };
