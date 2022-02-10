@@ -14,14 +14,15 @@ const parseTransform = require('./src/transforms/parse-transform.js');
 // Import data files
 const site = require('./src/_data/site.json');
 
-const Image = require("@11ty/eleventy-img");
-let Nunjucks = require("nunjucks");
+const Image = require('@11ty/eleventy-img');
 
-module.exports = function(config) {
+
+module.exports = function (config) {
   config.addShortcode('image', (src, alt, sizes, widths) => {
     let options = {
       widths: widths,
       formats: ['webp', 'jpeg'],
+      outputDir: "./dist/img/"
     };
 
     // generate images, while this is async we don’t wait
@@ -39,23 +40,10 @@ module.exports = function(config) {
 
   config.addShortcode('user', function (name, twitterUsername) {
     return `<div class="user">
-      <div class="user_name">${name}</div>
-      <div class="user_twitter">@${twitterUsername}</div>
-      </div>`;
+       <div class="user_name">${name}</div>
+       <div class="user_twitter">@${twitterUsername}</div>
+       </div>`;
   });
-
-  // let nunjucksEnvironment = new Nunjucks.Environment(
-  //   new Nunjucks.FileSystemLoader("_includes")
-  // );
-
-  // Nunjucks.precompile('src/_includes',
-  //   { 
-  //     env: nunjucksEnvironment,
-  //     force: 1
-  //   }
-  // );
-
-  // config.setLibrary("njk", nunjucksEnvironment);
 
   // Filters
   config.addFilter('dateFilter', dateFilter);
@@ -74,33 +62,29 @@ module.exports = function(config) {
 
   // Passthrough copy
   config.addPassthroughCopy('src/fonts');
-  config.addPassthroughCopy('src/images');
-  config.addPassthroughCopy('img');
   config.addPassthroughCopy('src/js');
   config.addPassthroughCopy('src/admin/config.yml');
   config.addPassthroughCopy('src/admin/previews.js');
-  // config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
-  config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks.js');
+  config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   config.addPassthroughCopy('src/robots.txt');
 
   const now = new Date();
 
   // Custom collections
-  const livePosts = post => post.date <= now && !post.data.draft;
-  config.addCollection('posts', collection => {
+  const livePosts = (post) => post.date <= now && !post.data.draft;
+  config.addCollection('posts', (collection) => {
     return [
-      ...collection.getFilteredByGlob('./src/content/posts/*.md').filter(livePosts)
+      ...collection.getFilteredByGlob('./src/content/posts/*.md').filter(livePosts),
     ].reverse();
   });
 
-  config.addCollection('postFeed', collection => {
+  config.addCollection('postFeed', (collection) => {
     return [...collection.getFilteredByGlob('./src/content/posts/*.md').filter(livePosts)]
       .reverse()
       .slice(0, site.maxPostsPerPage);
   });
 
-
-    // import all macros into posts / pages (minus index) so that end user doesn not need to for each page
+  // import all macros into posts / pages (minus index) so that end user doesn not need to for each page
   config.addCollection('content', (collectionApi) => {
     // Note: Update the path to point to your macro file
     const macroImport = `{% import "macros/macros.njk" as macro with context %}`;
@@ -108,26 +92,26 @@ module.exports = function(config) {
     // Note: Collections don’t include layouts or includes, which still require importing macros manually
     let collection = collectionApi.getFilteredByGlob('src/content/**/*.md');
     collection.forEach((item) => {
-      item.template.frontMatter.content = `${macroImport}\n${item.template.frontMatter.content}`
-    })
+      item.template.frontMatter.content = `${macroImport}\n${item.template.frontMatter.content}`;
+    });
     return collection;
-  })
+  });
 
   // Plugins
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);
-  
-  // Forestry instant previews 
-  if( process.env.ELEVENTY_ENV == "dev" ) {
+
+  // Forestry instant previews
+  if (process.env.ELEVENTY_ENV == 'dev') {
     eleventyConfig.setBrowserSyncConfig({
-      host: "0.0.0.0"
+      host: '0.0.0.0',
     });
   }
 
   // 404
   config.setBrowserSyncConfig({
     callbacks: {
-      ready: function(err, browserSync) {
+      ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('dist/404.html');
 
         browserSync.addMiddleware('*', (req, res) => {
@@ -135,8 +119,8 @@ module.exports = function(config) {
           res.write(content_404);
           res.end();
         });
-      }
-    }
+      },
+    },
   });
 
   return {
@@ -145,8 +129,8 @@ module.exports = function(config) {
     dir: {
       input: 'src',
       includes: '_includes',
-      //data: '_data',
-      output: 'dist'
-    }
+      data: '_data',
+      output: 'dist',
+    },
   };
 };
