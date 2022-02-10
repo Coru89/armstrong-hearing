@@ -1,4 +1,4 @@
-@import 'tokens';
+@import '_tokens';
 
 $breakpoints: map-get($tokens, 'breakpoints');
 $breakpoints-config: (
