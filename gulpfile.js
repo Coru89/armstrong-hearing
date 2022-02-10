@@ -1,86 +1,24 @@
-const { src, dest, series, watch } = require("gulp")
-const fs = require("fs")
+const { parallel, watch } = require('gulp');
 
-const gulp = {
-  clean: require("gulp-clean"),
-  connect: require("gulp-connect"),
-  postcss: require("gulp-postcss"),
-  run: require("gulp-run-command").default,
-  webpack: require("webpack-stream"),
-  webpackCompiler: require("webpack"),
-  vinylNamed: require("vinyl-named")
-}
+// Pull in each task
+// const fonts = require('./gulp-tasks/fonts.js');
+const sass = require('./gulp-tasks/sass.js');
+const images = require('./gulp-tasks/images.js');
+const js = require('./gulp-tasks/js.js');
 
-const htmlExts = [
-  "11tydata.js",
-  "json",
-  "html",
-  "md",
-  "11ty.js",
-  "liquid",
-  "njk",
-  "hbs",
-  "mustache",
-  "ejs",
-  "haml",
-  "pug",
-  "jstl"
-]
+// Set each directory and contents that we want to watch and
+// assign the relevant task. `ignoreInitial` set to true will
+// prevent the task being run when we run `gulp watch`, but it
+// will run when a file changes.
+const watcher = () => {
+  watch('./src/scss/**/*.scss', { ignoreInitial: true }, sass);
+  watch('./src/images/**/*', { ignoreInitial: true }, images);
+  watch('./src/js/**/*', { ignoreInitial: true }, js);
+};
 
-const cssFiles = ["./src/**/*.scss", "./tailwind.config.js", "./postcss.config.js"]
-const htmlFiles = htmlExts.map((ext) => `./src/**/*.${ext}`).concat(".eleventy.js")
+// The default (if someone just runs `gulp`) is to run each task in parrallel
+exports.default = parallel(images, sass);
 
-const clean = () => {
-  return src("dist", { allowEmpty: true, read: false }).pipe(gulp.clean())
-}
-
-const css = () => {
-  return src("./src/scss/*.scss").pipe(gulp.postcss()).pipe(dest("./dist/css"))
-}
-
-const html = () => {
-  return gulp.run("eleventy")()
-}
-
-const js = () => {
-  return src("./src/js/*.js")
-    .pipe(gulp.vinylNamed())
-    .pipe(gulp.webpack(require("./webpack.config.js"), gulp.webpackCompiler, reload))
-    .pipe(dest("./dist/js"))
-}
-
-const reload = (done) => {
-  if (!fs.existsSync("dist")) return done ? done() : null
-  return src("./dist").pipe(gulp.connect.reload())
-}
-
-const develop = (done) => {
-  clean()
-  html()
-  css()
-  js()
-
-  gulp.connect.server({
-    root: "dist",
-    port: "8000",
-    livereload: true
-  })
-
-  cssFiles.map((file) => watch(file, series(css, reload)))
-  htmlFiles.map((file) => watch(file, series(html, css, reload)))
-
-  done()
-}
-
-const build = series(clean, html, css, js)
-
-module.exports = {
-  build: build,
-  clean: clean,
-  css: css,
-  default: build,
-  develop: develop,
-  html: html,
-  js: js,
-  reload: reload
-}
+// This is our watcher task that instructs gulp to watch directories and
+// act accordingly
+exports.watch = watcher;

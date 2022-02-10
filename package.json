@@ -4,11 +4,8 @@
   "description": "A simple Eleventy starter kit to help you have a blog of your own",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
-    "clean": "gulp clean",
-    "develop": "gulp develop",
-    "start": "develop",
-    "test": "jest"
+    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
   },
   "keywords": [],
   "author": "",
@@ -27,9 +24,11 @@
     "cross-env": "^7.0.3",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-connect": "^5.7.0",
     "gulp-postcss": "^8.0.0",
     "gulp-run-command": "^0.0.10",
+    "gulp-sass": "^5.1.0",
     "html-minifier": "^4.0.0",
     "image-size": "^1.0.1",
     "json-to-scss": "^1.6.2",
