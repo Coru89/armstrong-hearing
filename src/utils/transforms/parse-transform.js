@@ -1,10 +1,10 @@
 const jsdom = require('@tbranyen/jsdom');
 const {JSDOM} = jsdom;
-const minify = require('../utils/minify.js');
+//const minify = require('../minify.js');
 const slugify = require('slugify');
 const getSize = require('image-size');
 
-module.exports = function(value, outputPath) {
+exports.parseHTML = function(value, outputPath) {
   if (outputPath.endsWith('.html')) {
     const DOM = new JSDOM(value, {
       resources: 'usable'
@@ -86,3 +86,13 @@ module.exports = function(value, outputPath) {
   }
   return value;
 };
+
+function minify(input) {
+  return input.replace(/\s{2,}/g, '').replace(/\'/g, '"');
+};
+
+exports.default = (eleventyConfig) => {
+  return eleventyConfig.addTransform("parse-html", exports.parseHTML)
+}
+
+

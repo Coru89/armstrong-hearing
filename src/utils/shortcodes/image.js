@@ -1,22 +1,23 @@
-const config = require("../../../eleventy.js")
+const config = require("../../../eleventy.config")
 const Image = require("@11ty/eleventy-img");
 
-exports.imageShortCode = (cfg = config, src, alt, sizes, widths) => {
+exports.imageShortCode = (src, alt, loading, sizes, widths) => {
     let options = {
       widths: widths,
       formats: ['webp', 'jpeg'],
+      outputDir: "./dist/img/"
     };
 
     // generate images, while this is async we don’t wait
-    Image(src, options);
+    Image(`./src/images/${src}`, options);
 
     let imageAttributes = {
       alt,
       sizes,
-      loading: 'lazy'
+      loading
     };
     // get metadata even the images are not fully generated
-    let metadata = Image.statsSync(src, options);
+    let metadata = Image.statsSync(`./src/images/${src}`, options);
     return Image.generateHTML(metadata, imageAttributes);
   }
 
@@ -26,5 +27,5 @@ exports.imageShortCode = (cfg = config, src, alt, sizes, widths) => {
  * @param {object} eleventyConfig Eleventy's configuration object
  */
   exports.default = (eleventyConfig) => {
-    eleventyConfig.addShortcode("image", (src, alt, sizes, widths) => exports.imageShortCode(src, alt, sizes, widths))
+    eleventyConfig.addShortcode("image", (src, alt, loading, sizes, widths) => exports.imageShortCode(src, alt, loading, sizes, widths))
   }
