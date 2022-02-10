@@ -18,31 +18,12 @@ const Image = require("@11ty/eleventy-img");
 let Nunjucks = require("nunjucks");
 
 module.exports = function(config) {
-  config.addShortcode('image', (src, alt, sizes, widths) => {
-    let options = {
-      widths: widths,
-      formats: ['webp', 'jpeg'],
-    };
-
-    // generate images, while this is async we don’t wait
-    Image(src, options);
-
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading: 'lazy'
-    };
-    // get metadata even the images are not fully generated
-    let metadata = Image.statsSync(src, options);
-    return Image.generateHTML(metadata, imageAttributes);
-  });
-
-  config.addShortcode('user', function (name, twitterUsername) {
-    return `<div class="user">
-      <div class="user_name">${name}</div>
-      <div class="user_twitter">@${twitterUsername}</div>
-      </div>`;
-  });
+  // config.addShortcode('user', function (name, twitterUsername) {
+  //   return `<div class="user">
+  //     <div class="user_name">${name}</div>
+  //     <div class="user_twitter">@${twitterUsername}</div>
+  //     </div>`;
+  // });
 
   // let nunjucksEnvironment = new Nunjucks.Environment(
   //   new Nunjucks.FileSystemLoader("_includes")
