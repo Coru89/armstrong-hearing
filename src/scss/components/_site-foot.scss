@@ -1,15 +1,14 @@
 .site-foot {
   // Reverse whatever the theme colors are
-  background: var(--color-bg-light);
+  // background: var(--color-bg-light);
+  background-color: #148938;
   border-top: 1px solid var(--color-stroke);
   color: var(--color-white);
-  padding: get-size(700) 0 get-size(900) 0;
+  padding: 13.5rem 0 5rem 0;
 
   &__wrapper {
     @include panel-container;
-  }
 
-  &__inner {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -40,22 +39,32 @@
       text-decoration: none;
     }
   }
-
-  &__credit {
-    text-align: center;
-  }
 }
 
+.copyright {
+  font-size: get-font-size(300);
+}
 
 .social-icons {
   &__list {
     display: flex;
     justify-content: center;
+    margin-bottom: get-size(700);
   }
 
   &__item {
+    border-radius: 50%;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+
     &:not(:first-child) {
       margin-left: 0.5rem;
+    }
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: var(--theme-box-shadow);      
     }
   }
 }

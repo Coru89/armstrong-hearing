@@ -2,9 +2,9 @@
 <header role="banner" class="site-head">
   <div class="site-head__wrapper">
     <div class="site-head__inner">
-      <a href="/" class="site-head__site-name">
-        <img class="site-head__logo" alt="Armstrong Hearing" src="/images/logos/main-logo.svg" />
-        <img class="site-head__logo site-head__logo--dark" alt="Armstrong Hearing" src="/images/logos/main-logo-reverse.svg" />
+      <a aria-label="Armstrong Hearing Logo" href="/" class="site-head__site-name">
+        {% svg "main-logo" %}
+        {% svg "main-logo-reverse" %}
       </a>
       {% set ariaLabel = 'navigation' %}
       {% include "partials/components/nav.njk" %}

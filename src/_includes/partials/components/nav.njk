@@ -44,6 +44,10 @@
           {% endif %}
         </li>
       {% endfor %}
+        {% from "macros/macros.njk" import button_link %}
+        <li class="nav__item--contact">
+          {{ button_link("Contact", "/contact", true) }}
+        </li>
     </ul>
   </nav>
 {% endif %}

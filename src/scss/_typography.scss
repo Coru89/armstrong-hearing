@@ -6,6 +6,7 @@
 //   font-weight: 400;
 //   src: local('Quicksand'),
 //     url('/fonts/Quicksand-Regular.woff2') format('woff2');
+//   font-display: swap;
 // }
 
 // @font-face {
@@ -15,6 +16,7 @@
 //   font-weight: 500;
 //   src: local('Quicksand Medium'), local('Quicksand-Medium'),
 //     url('/fonts/Quicksand-Medium.woff2') format('woff2');
+//   font-display: swap;
 // }
 
 // @font-face {
@@ -24,6 +26,7 @@
 //   font-weight: 700;
 //   src: local('Quicksand Bold'), local('Quicksand-Bold'),
 //     url('/fonts/Quicksand-Bold.woff2') format('woff2');
+//  font-display: swap;
 // }
 
 @font-face {
@@ -32,6 +35,7 @@
   font-weight: 400;
   src: local('DMSans'),
     url('/fonts/DMSans-Regular.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -40,6 +44,7 @@
   font-weight: 500;
   src: local('DMSans Medium'), local('DMSans-Medium'),
     url('/fonts/DMSans-Medium.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -48,6 +53,7 @@
   font-weight: 700;
   src: local('DMSans Bold'), local('DMSans-Bold'),
     url('/fonts/DMSans-Bold.woff2') format('woff2');
+  font-display: swap;
 }
 
 body {

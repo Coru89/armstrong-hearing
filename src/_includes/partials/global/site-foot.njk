@@ -1,35 +1,22 @@
 <footer role="contentinfo" class="site-foot">
   <div class="site-foot__wrapper">
-    <div class="site-foot__inner">
 
-      <div class="site-foot__row">
+    <div class="site-foot__row">
+      <nav class="social-icons">
         <ul class="social-icons__list">
           <li class="social-icons__item">
-            <a href="#">
-              {% include "icons/glassdoor.svg" %}
+            <a aria-label="LinkedIn" href="#">
+              {% svg "linkedin" %}
             </a>
           </li>
+
           <li class="social-icons__item">
-            <a href="#">
-              {% include "icons/linkedin.svg" %}
+            <a aria-label="Facebook" href="#">
+              {% svg "facebook" %}
             </a>
           </li>
-          <li class="social-icons__item">
-          <a href="#">
-            {% include "icons/youtube.svg" %}
-          </a>
-        </li>
-        <li class="social-icons__item">
-          <a href="#">
-            {% include "icons/twitter.svg" %}
-          </a>
-        </li>
-        <li class="social-icons__item">
-          <a href="#">
-            {% include "icons/facebook.svg" %}
-          </a>
-        </li>
-      </ul>
+        </ul>
+      </nav>
     </div>
 
     <div class="site-foot__row">
@@ -44,5 +31,4 @@
     </div>
 
   </div>
-</div>
 </footer>

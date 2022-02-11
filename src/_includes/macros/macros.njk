@@ -180,6 +180,10 @@
   <button type="submit" class="button">{{ text }}</button>
 {% endmacro %}
 
-{% macro button_link( text, link ) %}
-  <a class="button" href="{{ link }}">{{ text }}</a>
+{% macro button_link( text, link, arrow ) %}
+  <a class="button{% if arrow === true %} button--arrow{% endif %}" href="{{ link }}">{{ text }}
+    {% if arrow === true %}
+      {% svg "arrow-full-2" %}
+    {% endif %}
+  </a>
 {% endmacro %}
