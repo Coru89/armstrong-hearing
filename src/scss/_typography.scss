@@ -30,29 +30,29 @@
 // }
 
 @font-face {
-  font-family: 'DMSans';
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('DMSans'),
-    url('/fonts/DMSans-Regular.woff2') format('woff2');
+  src: local('DM Sans'), local('DMSans'), local('DM Sans Regular'), local('DMSans Regular'), local('DMSans-Regular'),
+    url('/fonts/DMSans-Regular.woff2') format('woff2'), url('/fonts/DMSans-Regular.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DMSans';
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
-  src: local('DMSans Medium'), local('DMSans-Medium'),
-    url('/fonts/DMSans-Medium.woff2') format('woff2');
+  src: local('DM Sans Medium'), local('DMSans Medium'), local('DMSans-Medium'), local('DM Sans-Medium'),
+    url('/fonts/DMSans-Medium.woff2') format('woff2'), url('/fonts/DMSans-Medium.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DMSans';
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('DMSans Bold'), local('DMSans-Bold'),
-    url('/fonts/DMSans-Bold.woff2') format('woff2');
+  src: local('DM Sans Bold'), local('DMSans Bold'), local('DMSans-Bold'), local('DM Sans-Bold'),
+    url('/fonts/DMSans-Bold.woff2') format('woff2'), url('/fonts/DMSans-Bold.woff') format('woff');
   font-display: swap;
 }
 

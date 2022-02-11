@@ -63,7 +63,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('home', 'layouts/home.njk');
 
   // watch sass
-  eleventyConfig.addWatchTarget('src/scss');
+  // eleventyConfig.addWatchTarget('src/scss');
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy('src/fonts');

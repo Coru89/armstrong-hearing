@@ -11,7 +11,7 @@ const js = require('./gulp-tasks/js.js');
 // prevent the task being run when we run `gulp watch`, but it
 // will run when a file changes.
 const watcher = () => {
-  watch('./src/scss/**/*.scss', { ignoreInitial: true }, sass);
+  watch('./src/scss/**/*.scss', sass);
   watch('./src/images/**/*', { ignoreInitial: true }, images);
   watch('./src/js/**/*', { ignoreInitial: true }, js);
 };
