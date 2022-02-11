@@ -12,9 +12,6 @@ const dateFilter = require('./src/filters/date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
-// Import transforms
-// const htmlMinTransform = require('./src/utils/transforms/html-min-transform.js.js');
-// const parseTransform = require('./src/utils/transforms/parse-transform.js');
 
 // Import data files
 const site = require('./src/_data/site.json');
@@ -22,6 +19,7 @@ const site = require('./src/_data/site.json');
 
 /**
  * Require all necessary files
+ * brings in shortcodes / transforms from utils
  */
  const getUtilFiles = () => {
   // Utils directory.

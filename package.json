@@ -4,8 +4,9 @@
   "description": "A simple Eleventy starter kit to help you have a blog of your own",
   "main": "index.js",
   "scripts": {
-    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
-    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+    "sass:tokens": "npx json-to-scss src/_data/tokens.json src/scss/tokens.scss",
+    "start": "npx gulp && concurrently \"npm run sass:tokens -- --watch\" \"npx gulp watch\" \"npx eleventy --serve\"",  
+    "production": "npm run sass:tokens && NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
   },
   "keywords": [],
   "author": "",

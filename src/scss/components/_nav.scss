@@ -66,8 +66,11 @@
   }
 
   &__item {
+    font-weight: 700;
+    font-size: get-font-size(300);
     padding: .5rem 0;
     position: relative;
+    text-transform: uppercase;
     white-space: nowrap;
 
     .arrow {

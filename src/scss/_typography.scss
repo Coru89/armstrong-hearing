@@ -1,33 +1,57 @@
 
+// @font-face {
+//   font-family: 'Quicksand';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-weight: 400;
+//   src: local('Quicksand'),
+//     url('/fonts/Quicksand-Regular.woff2') format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Quicksand';
+//   font-style: normal;
+//   font-weight: 500;
+//   font-weight: 500;
+//   src: local('Quicksand Medium'), local('Quicksand-Medium'),
+//     url('/fonts/Quicksand-Medium.woff2') format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Quicksand';
+//   font-style: normal;
+//   font-weight: 700;
+//   font-weight: 700;
+//   src: local('Quicksand Bold'), local('Quicksand-Bold'),
+//     url('/fonts/Quicksand-Bold.woff2') format('woff2');
+// }
+
 @font-face {
-  font-family: 'Quicksand';
+  font-family: 'DMSans';
   font-style: normal;
   font-weight: 400;
-  font-weight: 400;
-  src: local('Quicksand'),
-    url('/fonts/Quicksand-Regular.woff2') format('woff2');
+  src: local('DMSans'),
+    url('/fonts/DMSans-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Quicksand';
+  font-family: 'DMSans';
   font-style: normal;
   font-weight: 500;
-  font-weight: 500;
-  src: local('Quicksand Medium'), local('Quicksand-Medium'),
-    url('/fonts/Quicksand-Medium.woff2') format('woff2');
+  src: local('DMSans Medium'), local('DMSans-Medium'),
+    url('/fonts/DMSans-Medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Quicksand';
+  font-family: 'DMSans';
   font-style: normal;
   font-weight: 700;
-  font-weight: 700;
-  src: local('Quicksand Bold'), local('Quicksand-Bold'),
-    url('/fonts/Quicksand-Bold.woff2') format('woff2');
+  src: local('DMSans Bold'), local('DMSans-Bold'),
+    url('/fonts/DMSans-Bold.woff2') format('woff2');
 }
 
 body {
-  font-family: get-font(base);
+  font-family: get-font(serif);
 }
  
  h1,

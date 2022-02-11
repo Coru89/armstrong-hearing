@@ -1,0 +1,22 @@
+.hero {
+  &__heading {
+    color: var(--color-hero-heading);
+    margin-bottom: get-size(600);
+    padding: 0;
+  }
+
+  &__summary {
+    font-size: get-font-size(500);
+  }
+
+  &__wrapper {
+    background-color: var( --color-bg);
+    line-height: 2rem;
+    margin: 0 auto -64px;
+    max-width: 71rem;
+    padding: 4.5rem 6rem 4.5rem 6rem;
+    position: relative;
+    text-align: center;
+    top: -64px;
+  }
+}

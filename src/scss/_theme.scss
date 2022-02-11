@@ -32,7 +32,9 @@
   --color-nav-menu-text: #{get-color(black)};
   --color-nav-menu-bg: #{get-color(white)};
   --color-nav-active-accent: #{get-color('primary')};
-  
+
+  // hero
+  --color-hero-heading: #{get-color('primary')};
 }
 
 @include dark-mode() {
@@ -58,6 +60,9 @@
   --color-nav-menu-text: #{get-color(white)};
   --color-nav-menu-bg: #{get-color(white)};
   --color-nav-active-accent: #{get-color('primary')};
+
+    // hero
+    --color-hero-heading: #{get-color(white)};
     
 }
 
