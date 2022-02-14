@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass:tokens": "npx json-to-scss src/_data/tokens.json src/scss/_tokens.scss",
-    "start": "npx gulp && concurrently \"npm run sass:tokens -- --watch\" \"npx gulp watch\" \"npx eleventy --serve\"",  
+    "start": "npx gulp && concurrently \"npm run sass:tokens -- --watch\" \"npx gulp watch\" \"npx eleventy --serve\"",
     "production": "npm run sass:tokens && NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
     "chokidar-cli": "^3.0.0",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
+    "focus-within-polyfill": "^5.2.1",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
