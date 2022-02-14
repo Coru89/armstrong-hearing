@@ -13,34 +13,7 @@
     {
       "text": "Resources",
       "url": "/resources",
-      "external": false,
-      "items": [
-        {
-          "text": "Websites",
-          "url": "/services/websites",
-          "external": false
-        },
-        {
-          "text": "E-Commerce",
-          "url": "/services/ecommerce",
-          "external": false
-        },
-        {
-          "text": "Jamstack",
-          "url": "/services/jamstack",
-          "external": false
-        },
-        {
-          "text": "SharePoint",
-          "url": "/services/sharepoint",
-          "external": false
-        }
-      ]
-    },
-    {
-      "text": "Style Guide",
-      "url": "/styleguide",
-      "external": true
+      "external": false
     }
   ]
 }
