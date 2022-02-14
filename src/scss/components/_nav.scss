@@ -54,17 +54,6 @@
       justify-content: flex-end;
     }
   }
-
-  &__sublist {
-    background: var(--color-nav-menu-bg);
-    box-shadow: var(--theme-box-shadow);
-    color: var(--color-black);
-    display: none;
-    margin-top: get-size(base);
-    padding: 0 24px;
-    position: absolute;
-  }
-
   &__item {
     font-weight: 700;
     font-size: get-font-size(300);
@@ -112,5 +101,15 @@
       justify-content: center;
       text-decoration: none;
     }
+  }
+
+  &__sublist {
+    background: var(--color-nav-menu-bg);
+    box-shadow: var(--theme-box-shadow);
+    color: var(--color-black);
+    display: none;
+    margin-top: get-size(base);
+    padding: 0 24px;
+    position: absolute;
   }
 }

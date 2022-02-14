@@ -17,7 +17,7 @@
         <li class="nav__item {{ currentClass | safe }}">
           <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}
             {% if item.items %}
-              {% include "icons/arrow.svg" %}
+              {% svg "arrow" %}
             {% endif %}
           </a>
           {% if item.items %}

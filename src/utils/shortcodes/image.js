@@ -5,7 +5,8 @@ exports.imageShortCode = (src, alt, loading, sizes, widths) => {
     let options = {
       widths: widths,
       formats: ['webp', 'jpeg'],
-      outputDir: "./dist/img/"
+      outputDir: "./dist/img/",
+      useCache: true
     };
 
     // generate images, while this is async we don’t wait
