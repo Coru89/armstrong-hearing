@@ -6,15 +6,14 @@
   for = "*.woff"
   [headers.values]
     Cache-Control = "public, max-age=604800"
-
 [[headers]]
   for = "*.woff2"
   [headers.values]
     Cache-Control = "public, max-age=604800"
-
-for = "*.js" # js files should be set this way
-[headers.values]
-  Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "*.js" # js files should be set this way
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 [[headers]]
   for = "*.css" # css files too
   [headers.values]
