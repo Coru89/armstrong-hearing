@@ -1,8 +1,7 @@
 theme-toggle {
+  display: block;
   padding: 0 0 0 get-size(500);
-  position: absolute;
-  right: 0;
-  top: 12px;
+  vertical-align: middle;
 
   @include media-query(md) {
     position: static;

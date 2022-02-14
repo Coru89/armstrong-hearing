@@ -1,5 +1,9 @@
 {% if navigation.items %}
   <nav class="nav" aria-label="{{ariaLabel}}">
+    <button class="nav__button" id="nav">
+      {% svg "nav" %}
+      {% svg "close" %}
+    </button>
     <ul class="nav__list">
       {% for item in navigation.items %}
         {% set relAttribute = '' %}
@@ -47,6 +51,9 @@
         {% from "macros/macros.njk" import button_link %}
         <li class="nav__item--contact">
           {{ button_link("Contact", "/contact", true) }}
+        </li>
+        <li class="nav__item--theme">
+          <theme-toggle></theme-toggle>
         </li>
     </ul>
   </nav>
