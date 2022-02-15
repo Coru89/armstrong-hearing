@@ -19,23 +19,26 @@
     &--close {
       display: none;
       height: 18px;
+      pointer-events: none;
       width: 18px;
     }
 
-    &:focus-within,
-    &:focus,
-    &:active {
+    &--open {
+      pointer-events: none;
+    }
+
+    &--active {
       + .nav__list {
-        display: flex;
-      }
+          display: flex;
+        }
 
       .nav__button {
         &--close {
-          display: block;
+            display: block;
         }
 
         &--open {
-          display: none;
+            display: none;
         }
       }
     }
