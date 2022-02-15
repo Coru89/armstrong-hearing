@@ -11,7 +11,7 @@
   // Set theme aliases
   --color-mode: 'light';
   --color-bg: #{get-color(white)};
-  --color-bg-light: #{get-color('primary')};
+  --color-bg-light: #{get-color('primary-lighter')};
   --color-text: #{get-color(black)};
   --color-text-glare: #{get-color(black)};
   --color-selection-text: #{get-color(white)};
@@ -23,6 +23,8 @@
   --color-theme-primary-light: #{get-color('primary-light')};
   --color-theme-highlight: #{get-color('primary')};
   --color-theme-highlight-block: #{get-color('primary-light')};
+  --color-theme-icon: #{get-color('primary')};
+
 
   //for dark mode toggle button
   --color-theme-toggle-icon: #{get-color(white)};
@@ -45,12 +47,13 @@
   --color-selection-bg: #{get-color(white)};
   --color-stroke: #{get-color('slate')};
   --color-theme-primary: #{lighten(get-color('primary'), 50%)};
-  --color-theme-primary-light: #{lighten(get-color('primary-light'), 50%)};
+  --color-theme-primary-lighter: #{get-color(white)};
   --color-action-bg: #{get-color(white)};
   --color-action-text: #{get-color(black)};
   --color-theme-highlight: #{get-color('primary')};
   --color-theme-highlight-block: #{get-color('slate')};
   --color-theme-feature-text: #{get-color(white)};
+  --color-theme-icon: #{get-color(white)};
 
   // for dark mode toggle button
   --color-theme-toggle-icon: #{get-color(white)};
