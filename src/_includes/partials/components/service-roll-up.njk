@@ -2,7 +2,7 @@
   <section class="service-roll-up">
     <div class="service-roll-up__wrapper">
       <h2 class="service-roll-up__heading">{{ serviceHeading }}</h2>
-      <ol class="service-roll-up__items" reversed>
+      <div class="service-roll-up__items" reversed>
         {% for item in serviceCardItems %}
           <a href="{{ item.url }}" class="service-roll-up__link" rel="bookmark">
             <div class="service-roll-up__item">
@@ -16,7 +16,7 @@
             </div>
           </a>
         {% endfor %}
-      </ol>
+      </div>
       {% from "macros/macros.njk" import button_link %}
       {{ button_link('View all services', '/services', true) }}
 
