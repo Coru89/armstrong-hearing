@@ -1,0 +1,25 @@
+{% if serviceCardItems.length %}
+  <section class="service-roll-up">
+    <div class="service-roll-up__wrapper">
+      <h2 class="service-roll-up__heading">{{ serviceHeading }}</h2>
+      <ol class="service-roll-up__items" reversed>
+        {% for item in serviceCardItems %}
+          <a href="{{ item.url }}" class="service-roll-up__link" rel="bookmark">
+            <div class="service-roll-up__item">
+              {% if item.data.icon %}
+                {% svg item.data.icon %}
+              {% endif %}
+              <div class="service-roll-up__item-title">
+                {{ item.data.title }}
+              </div>
+                <div class="service-roll-up__summary">{{ item.data.summary }}</div>
+            </div>
+          </a>
+        {% endfor %}
+      </ol>
+      {% from "macros/macros.njk" import button_link %}
+      {{ button_link('View all services', '/services', true) }}
+
+    </div>
+  </section>
+{% endif %}

@@ -77,14 +77,20 @@ module.exports = function (eleventyConfig) {
 
   // Custom collections
   const livePosts = (post) => post.date <= now && !post.data.draft;
-  eleventyConfig.addCollection('posts', (collection) => {
-    return [
-      ...collection.getFilteredByGlob('./src/content/posts/*.md').filter(livePosts),
-    ].reverse();
-  });
+  // eleventyConfig.addCollection('posts', (collection) => {
+  //   return [
+  //     ...collection.getFilteredByGlob('./src/content/posts/*.md').filter(livePosts),
+  //   ].reverse();
+  // });
 
-  eleventyConfig.addCollection('postFeed', (collection) => {
-    return [...collection.getFilteredByGlob('./src/content/posts/*.md').filter(livePosts)]
+  // eleventyConfig.addCollection('postFeed', (collection) => {
+  //   return [...collection.getFilteredByGlob('./src/content/posts/*.md').filter(livePosts)]
+  //     .reverse()
+  //     .slice(0, site.maxPostsPerPage);
+  // });
+
+  eleventyConfig.addCollection('serviceCards', (collection) => {
+    return [...collection.getFilteredByGlob('./src/content/serviceCards/*.md').filter(livePosts)]
       .reverse()
       .slice(0, site.maxPostsPerPage);
   });

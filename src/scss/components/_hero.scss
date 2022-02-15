@@ -1,8 +1,8 @@
 .hero {
   &__banner {
     &-img {
-      background-size: cover;
       background-position: 75%;
+      background-size: cover;
       height: 250px;
       width: 100%;
 
@@ -24,7 +24,11 @@
   }
 
   &__summary {
-    font-size: get-font-size(500);
+    font-size: get-font-size(300);
+    
+    @include media-query(md) {
+      font-size: get-font-size(500);
+    }
   }
 
   &__wrapper {
@@ -32,10 +36,13 @@
     line-height: 2rem;
     margin: 0 auto;
     max-width: 71rem;
-    padding: 4.5rem 6rem 4.5rem 6rem;
+    padding: 2.5rem 1.5rem 1.25rem 1.5rem;
     position: relative;
     text-align: center;
 
+    @include media-query(md) {
+      padding: 4.5rem 6rem 4.5rem 6rem;
+    }
 
     @include media-query(xl) {
       top: -64px;

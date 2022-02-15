@@ -67,16 +67,17 @@ body {
 }
 
 h1 {
-  font-size: get-font-size(700);
-}
-
-h2 {
   font-size: get-font-size(600);
 }
 
-h3 {
+h2 {
   font-size: get-font-size(500);
 }
+
+h3 {
+  font-size: get-font-size(base);
+}
+
 
 @include media-query('md') {
    h1 {
@@ -85,10 +86,11 @@ h3 {
    }
 
   h2 {
-     font-size: get-font-size(800);
+     font-size: get-font-size(700);
    }
 
    h3 {
-    font-size: get-font-size(700);
+    font-size: get-font-size(600);
    }
+
 }

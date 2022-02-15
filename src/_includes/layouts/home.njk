@@ -4,8 +4,11 @@
 {% set heroHeading = title %}
 
 {# Post list content #}
-{% set postListHeading = postsHeading %}
-{% set postListItems = collections.postFeed %}
+{# {% set postListHeading = postsHeading %}
+{% set postListItems = collections.postFeed %} #}
+
+{# {% set serviceHeading = serviceHeading %} #}
+{% set serviceCardItems = collections.serviceCards %}
 
 {# Archive link #}
 {% if postListItems.length < collections.posts.length %} 
@@ -16,5 +19,6 @@
 {% block content %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/hero.njk" %}
+    {% include "partials/components/service-roll-up.njk" %}
   </main>
 {% endblock %}

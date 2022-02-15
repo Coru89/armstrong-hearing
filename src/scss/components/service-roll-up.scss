@@ -1,0 +1,47 @@
+.service-roll-up {
+    @include panel-container;
+
+    text-align: center;
+    padding-bottom: 6.5rem;
+
+    &__heading,
+    &__list {
+        padding-bottom: 3rem;
+    }
+
+    &__items {
+        @include media-query(sm) {
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-query(lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__item {
+        border: 1px solid var(--color-grey);
+        padding: 1rem;
+        text-align: left;
+
+        * {
+            color: var(--color-text);
+        }
+
+        &-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            padding: 1.25rem 0 1.5rem;
+        }
+    }
+
+    &__link {
+        display: grid;
+        grid-auto-rows: 1fr;
+        text-decoration: none;
+        padding-bottom: 3rem;
+    }
+}
+
