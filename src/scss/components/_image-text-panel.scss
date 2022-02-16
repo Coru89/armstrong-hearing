@@ -1,19 +1,28 @@
 .image-text-panel {
-  @include panel-container;
+  margin: 6rem 0;
 
-  padding: 6rem 0;
-  text-align: center;
+  &__inner {
+    @include panel-container;
+    
+    text-align: center;
 
-  @include media-query(md) {
-    display: flex;
-    align-items: center;
+    @include media-query(md) {
+      align-items: center;
+      display: flex;
+    }
+  
   }
 
   &__image {
-    width: 58%;
+    padding-bottom: 2rem;
+
+    @include media-query(md) {
+      padding-bottom: 0;
+      width: 58%;
+    }
     
     &--reverse {
-      order: 1;
+      order: 2;
     }
     
     img {
@@ -22,17 +31,19 @@
   }
 
   &__text {
-    width: 46%;
-  }
-
-
-  &__text {
     text-align: left;
-    padding: 0 3.5rem 0 0;
+
+    @include media-query(md) {
+      padding: 0 3.5rem 0 0;
+      width: 46%;
+    }
 
     &--reverse {
-      order: 2;
-      padding: 0 0 0 3.5rem;
+      order: 1;
+
+      @include media-query(md) {
+        padding: 0 0 0 3.5rem;
+      }
     }
 
     &-title {
