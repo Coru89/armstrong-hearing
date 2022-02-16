@@ -4,9 +4,10 @@ metaDesc: Armstrong Hearing is dedicated to identifying hearing loss and ear-rel
   disorders, and providing appropriate hearing solutions.
 socialImage: https://www.armstronghearing.ca/styles/images/contact.jpg
 title: Hear better. Live better.
-heroSummary: We’re dedicated to identifying hearing loss and ear-related disorders,
+bannerSummary: We’re dedicated to identifying hearing loss and ear-related disorders,
   and providing appropriate hearing solutions whether through hearing aids, assistive
   listening devices, hearing protection or rehabilitation counselling.
+bannerImage: banner.png
 serviceHeading: Hearing Services
 panelTitle1: Infant Hearing Program
 panelImage1: kids.png

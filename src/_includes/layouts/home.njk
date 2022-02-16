@@ -1,5 +1,4 @@
 {% from "macros/macros.njk" import component %}
-{# {%- from "system/component.njk" import component -%} #}
 
 {% extends 'layouts/base.njk' %}
 
@@ -21,7 +20,12 @@
 
 {% block content %}
   <main id="main-content" tabindex="-1">
-    {% include "partials/components/hero.njk" %}
+      {{ component('hero', {
+        heroHeading: title,
+        heroSummary: bannerSummary,
+        heroImage: bannerImage
+      }) }}
+
     {% include "partials/components/service-roll-up.njk" %}
 
       {{ component('image-text-panel', {

@@ -4,14 +4,16 @@
 		{# {% image "banner.png", "hi", "eager", "100vw", ['576', '600', '768', '992', '1280', '1920', '2560']%} #}
 	</div>
 	<div class="hero__wrapper">
-		<h1 class="hero__heading{{ ' hero__heading--compact' if page.url === '/' }}">{{ heroHeading | safe }}</h1>
-		{% if heroSummary %}
-		<div class="hero__summary">{{ heroSummary | safe }}</div>
+		<h1 class="hero__heading{{ ' hero__heading--compact' if page.url === '/' }}">{{ props.heroHeading | safe }}</h1>
+		{% if props.heroSummary %}
+		<div class="hero__summary">{{ props.heroSummary | safe }}</div>
 		{% endif %}
 	</div>
 </header>
 
-<style>
-	{% cssBackground "banner.png", ".hero__banner-img", ['576', '600', '768', '992', '1280', '1920', '2560'] %}
-</style>
+{% if props.heroImage %}
+	<style>
+		{% cssBackground props.heroImage, ".hero__banner-img", ['576', '600', '768', '992', '1280', '1920', '2560'] %}
+	</style>
+{% endif %}
 
