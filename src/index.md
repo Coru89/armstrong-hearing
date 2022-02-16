@@ -30,7 +30,7 @@ panelSummary2: We, Matthew and Kathryn Armstrong, are the proud owners of Armstr
   access, handicap accesible, and spacious parking.
 panelButtonText2: Let's talk
 panelButtonPath2: "/contact"
-panelImagePosition2: right
+panelImagePosition2: left
 
 ---
 <!-- do not delete -->
