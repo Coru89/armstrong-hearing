@@ -20,7 +20,7 @@ sections:
   path: src/content/pages/serviceCards
   label: Services
   create: all
-  match: "**/*"
+  match: "*.md"
 - type: heading
   label: Globals
 - type: document
