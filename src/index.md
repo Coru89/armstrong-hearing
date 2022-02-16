@@ -9,6 +9,8 @@ bannerSummary: We’re dedicated to identifying hearing loss and ear-related dis
   listening devices, hearing protection or rehabilitation counselling.
 bannerImage: banner.png
 serviceHeading: Hearing Services
+serviceButtonText: View all services
+serviceButtonPath: '/services'
 panelTitle1: Infant Hearing Program
 panelImage1: kids.png
 panelImageDescription1: kids playing

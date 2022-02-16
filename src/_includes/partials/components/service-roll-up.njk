@@ -1,9 +1,9 @@
-{% if serviceCardItems.length %}
+{% if props.serviceCardItems.length %}
   <section class="service-roll-up">
     <div class="service-roll-up__inner">
-      <h2 class="service-roll-up__heading">{{ serviceHeading }}</h2>
+      <h2 class="service-roll-up__heading">{{ props.serviceHeading }}</h2>
       <div class="service-roll-up__items" reversed>
-        {% for item in serviceCardItems %}
+        {% for item in props.serviceCardItems %}
           <a href="{{ item.url }}" class="service-roll-up__link" rel="bookmark">
             <div class="service-roll-up__item">
               {% if item.data.icon %}
@@ -12,13 +12,15 @@
               <div class="service-roll-up__item-title">
                 {{ item.data.title }}
               </div>
-                <div class="service-roll-up__summary">{{ item.data.summary }}</div>
+                <div class="service-roll-up__summary">{{ item.data.rollupSummary }}</div>
             </div>
           </a>
         {% endfor %}
       </div>
       {% from "macros/macros.njk" import button_link %}
-      {{ button_link('View all services', '/services', true) }}
+      {% if props.buttonText and props.buttonPath %}
+        {{ button_link(props.buttonText, props.buttonPath, true) }}
+      {% endif %}
 
     </div>
   </section>

@@ -1,4 +1,4 @@
-{% from "macros/macros.njk" import component %}
+{% from "macros/macros.njk" import component with context%}
 
 {% extends 'layouts/base.njk' %}
 
@@ -26,7 +26,12 @@
         heroImage: bannerImage
       }) }}
 
-    {% include "partials/components/service-roll-up.njk" %}
+      {{ component('service-roll-up', {
+        serviceHeading: serviceHeading,
+        buttonText: serviceButtonText,
+        buttonPath: serviceButtonPath,
+        serviceCardItems: serviceCardItems
+      }) }}
 
       {{ component('image-text-panel', {
         title: panelTitle1,
