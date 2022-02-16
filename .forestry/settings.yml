@@ -6,6 +6,9 @@ webhook_url:
 sections:
 - type: heading
   label: Content
+- type: document
+  path: src/index.md
+  label: Home
 - type: directory
   path: src/content/pages
   label: Pages
@@ -13,9 +16,11 @@ sections:
   match: "*.md"
   templates:
   - page
-- type: document
-  path: src/index.md
-  label: Home
+- type: directory
+  path: src/content/pages/serviceCards
+  label: Services
+  create: all
+  match: "**/*"
 - type: heading
   label: Globals
 - type: document
