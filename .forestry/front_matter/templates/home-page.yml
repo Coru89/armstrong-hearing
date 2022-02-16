@@ -29,13 +29,13 @@ fields:
   label: Panel Image 1
 - type: text
   name: panelImageDescription1
-  label: panelImageDescription1
+  label: Panel Image Description 1
 - type: textarea
   name: panelSummary1
-  label: panelSummary1
+  label: Panel Summary 1
 - type: text
   name: panelButtonText1
-  label: panelButtonText1
+  label: Panel ButtonText 1
 - type: text
   name: panelButtonPath1
   label: panelButtonPath1
@@ -60,6 +60,17 @@ fields:
 - type: text
   name: panelButtonPath2
   label: panelButtonPath2
-- type: text
-  name: panelImagePosition2
+- name: panelImagePosition2
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - left
+    - right
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: panelImagePosition2
