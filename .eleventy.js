@@ -63,11 +63,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('home', 'layouts/home.njk');
 
   // watch sass
-  // eleventyConfig.addWatchTarget('src/scss');
+  eleventyConfig.addWatchTarget('src/scss');
+  eleventyConfig.addWatchTarget('src/images');
+  // eleventyConfig.addWatchTarget('src/img');
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/js');
+  eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/admin/eleventyConfig.yml');
   eleventyConfig.addPassthroughCopy('src/admin/previews.js');
   eleventyConfig.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');

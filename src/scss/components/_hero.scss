@@ -41,7 +41,7 @@
     text-align: center;
 
     @include media-query(md) {
-      padding: 4.5rem 6rem 4.5rem 6rem;
+      padding: 4.5rem 6rem 2.5rem 6rem;
     }
 
     @include media-query(xl) {

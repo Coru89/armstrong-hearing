@@ -2,10 +2,11 @@
     @include panel-container;
 
     text-align: center;
-    padding-bottom: 6.5rem;
+    padding: 3.25rem 0;
 
     &__heading,
     &__list {
+        font-weight: 500;
         padding-bottom: 3rem;
     }
 

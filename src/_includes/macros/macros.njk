@@ -1,4 +1,28 @@
 {# ===================
+   Global component macro
+   =================== #}
+
+{%- macro component(name, props) -%}
+  {% include "../partials/components/" + name + ".njk" ignore missing %}
+{%- endmacro -%}
+
+{# ===================
+   Buttons
+   =================== #}
+{% macro button( text ) %}
+  <button type="submit" class="button">{{ text }}</button>
+{% endmacro %}
+
+{% macro button_link( text, link, arrow ) %}
+  <a class="button{% if arrow === true %} button--arrow{% endif %}" href="{{ link }}">{{ text }}
+    {% if arrow === true %}
+      {% svg "arrow-full-2" %}
+    {% endif %}
+  </a>
+{% endmacro %}
+
+
+{# ===================
    Forms
    =================== #}
 
@@ -176,14 +200,3 @@
   <input type="hidden" name="{{ name }}" id="field-{{ name }}" value="{{ value }}">
 {% endmacro %}
 
-{% macro button( text ) %}
-  <button type="submit" class="button">{{ text }}</button>
-{% endmacro %}
-
-{% macro button_link( text, link, arrow ) %}
-  <a class="button{% if arrow === true %} button--arrow{% endif %}" href="{{ link }}">{{ text }}
-    {% if arrow === true %}
-      {% svg "arrow-full-2" %}
-    {% endif %}
-  </a>
-{% endmacro %}

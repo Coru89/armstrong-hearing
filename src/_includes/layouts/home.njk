@@ -1,3 +1,6 @@
+{% from "macros/macros.njk" import component %}
+{# {%- from "system/component.njk" import component -%} #}
+
 {% extends 'layouts/base.njk' %}
 
 {# Intro content #}
@@ -5,13 +8,13 @@
 
 {# Post list content #}
 {# {% set postListHeading = postsHeading %}
-{% set postListItems = collections.postFeed %} #}
+{% set postListItems = collections.postFeed %}
 
 {# {% set serviceHeading = serviceHeading %} #}
 {% set serviceCardItems = collections.serviceCards %}
 
 {# Archive link #}
-{% if postListItems.length < collections.posts.length %} 
+{% if postListItems.length < collections.posts.length %}
   {% set paginationNextText = archiveButtonText %}
   {% set paginationNextUrl = '/archive' %}
 {% endif %}
@@ -20,5 +23,26 @@
   <main id="main-content" tabindex="-1">
     {% include "partials/components/hero.njk" %}
     {% include "partials/components/service-roll-up.njk" %}
+
+      {{ component('image-text-panel', {
+        title: panelTitle1,
+        summary: panelSummary1,
+        buttonText: panelButtonText1,
+        buttonPath: panelButtonPath1,
+        imageURL: panelImage1,
+        imageAlt: panelImageDescription1,
+        imagePosition: panelImagePosition1
+      }) }}
+
+      {{ component('image-text-panel', {
+        title: panelTitle2,
+        summary: panelSummary2,
+        buttonText: panelButtonText2,
+        buttonPath: panelButtonPath2,
+        imageURL: panelImage2,
+        imageAlt: panelImageDescription2,
+        imagePosition: panelImagePosition2
+      }) }}
+
   </main>
 {% endblock %}
