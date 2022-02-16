@@ -4,7 +4,7 @@
   <div class="image-text-panel__inner">
       <div class="image-text-panel__image{% if props.imagePosition === 'right' %} image-text-panel__image--reverse{% endif %}">
       {% if props.imageURL.length %}
-        {% image props.imageURL, props.imageAlt, "lazy", "100vw", ['400', '800', '1200'] %}
+        {% image props.imageURL, props.imageAlt, "lazy", "100vw", ['300', '400', '576', '600', '730'] %}
       {% endif %}
     </div>
     <div class="image-text-panel__text{% if props.imagePosition === 'left' %} image-text-panel__text--reverse{% endif %}">

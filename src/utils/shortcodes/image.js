@@ -15,7 +15,8 @@ exports.imageShortCode = (src, alt, loading, sizes, widths) => {
     let imageAttributes = {
       alt,
       sizes,
-      loading
+      loading,
+      widths
     };
     // get metadata even the images are not fully generated
     let metadata = Image.statsSync(`./src/images/${src}`, options);
