@@ -5,27 +5,28 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: textarea
   name: metaDesc
-  label: metaDesc
+  label: SEO Description
 - type: file
   name: socialImage
-  label: socialImage
+  label: SEO Image
 - type: text
   name: title
-  label: title
+  label: Heading Title
 - type: textarea
   name: heroSummary
-  label: heroSummary
+  label: Heading Summary
 - type: text
   name: serviceHeading
-  label: serviceHeading
+  label: Services Panel Heading
 - type: text
   name: panelTitle1
-  label: panelTitle1
+  label: Panel Title 1
 - type: file
   name: panelImage1
-  label: panelImage1
+  label: Panel Image 1
 - type: text
   name: panelImageDescription1
   label: panelImageDescription1
