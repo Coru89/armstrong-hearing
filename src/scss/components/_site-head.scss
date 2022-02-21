@@ -53,23 +53,23 @@
   }
 }
 
-@include dark-mode {
-  .site-head__logo {
-    display: none;
-  }
+// @include dark-mode {
+//   .site-head__logo {
+//     display: none;
+//   }
 
-  .site-head__logo--dark {
-    display: none;
+//   .site-head__logo--dark {
+//     display: none;
 
-    @include media-query(xl) {
-      display: block;
-    }
-  }
-  .site-head__logo--stacked.site-head__logo--dark {
-    display: block;
+//     @include media-query(xl) {
+//       display: block;
+//     }
+//   }
+//   .site-head__logo--stacked.site-head__logo--dark {
+//     display: block;
 
-    @include media-query(xl) {
-      display: none;
-    }
-  }
-}
+//     @include media-query(xl) {
+//       display: none;
+//     }
+//   }
+// }
