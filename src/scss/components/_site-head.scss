@@ -1,5 +1,5 @@
 .site-head {
-  padding: get-size(base);
+  padding: get-size(base) 0;
 
   &__wrapper {
     @include panel-container;

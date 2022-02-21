@@ -28,9 +28,10 @@
     }
 
     &--active {
-      + .nav__list {
-          display: flex;
-        }
+      + .nav__wrapper {
+        display: flex;
+        flex-direction: column;
+      }
 
       .nav__button {
         &--close {
@@ -44,33 +45,54 @@
     }
   }
 
+  &__wrapper {
+    background-color: var(--color-white);
+    box-shadow: 0 0.125rem 0.375rem -0.125rem rgb(0 0 0 / 15%);
+    display: none;
+    left: 0;
+    margin: 0 -1.5rem;
+    padding: 0 1.5rem;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+
+    @include media-query(md) {
+      box-shadow: none;
+      display: flex;
+      margin: initial;
+      padding: 0;
+      position: static;
+    }
+  }
+
+  &__secondary {
+    @include media-query(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__list {
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     align-items: center;
     background-color: var(--color-bg);
-    display: none;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     left: 0;
     list-style: none;
-    margin: -0.5rem;
-    padding: 0.5rem;
-    position: absolute;
-    right: 0;
-    top: 78px;
-    z-index: 1;
-
-    &:hover {
-      display: flex;
-    }
+    margin: 1rem 0;
+    text-align: left;
 
     @include media-query(md) {
-      display: flex;
       flex-direction: row;
+      margin: 0;
       position: static;
 
       & > .nav__item {
+        margin-right: get-size(500);
+
         &::after {
           background-color: var(--color-nav-active-accent);
           border-radius: 5px;
@@ -97,10 +119,6 @@
             width: 100%;
           }
         }
-
-        &:not(:last-child) {
-          margin-right: get-size(500);
-        }
       }
     }
 
@@ -112,15 +130,39 @@
       justify-content: flex-end;
     }
   }
+
   &__item {
+    border-bottom: 1px solid var(--color-grey);
     color: var(--color-nav-menu-text);
     display: block;
     font-size: get-font-size(300);
     font-weight: 700;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     position: relative;
     text-transform: uppercase;
     white-space: nowrap;
+    width: 100%;
+
+    @include media-query(md) {
+      border-bottom: 0;
+      padding: 0.5rem 0;
+      width: initial;
+
+      &::before {
+        bottom: -#{get-size(base)};
+        content: '';
+        display: block;
+        height: 30px;
+        position: absolute;
+        width: 100px;
+
+        &:hover {
+          .nav__sublist {
+            display: block;
+          }
+        }
+      }
+    }
 
 
     &::before,
@@ -144,31 +186,25 @@
       }
     }
 
-    a {
-      align-items: center;
+    &-link {
+      bottom: 0;
       color: currentColor;
-      display: flex;
       font-weight: 600;
-      justify-content: center;
+      height: 4rem;
+      left: 0;
+      padding-top: 2rem;
+      position: absolute;
+      right: 0;
       text-decoration: none;
-    }
+      top: 0;
 
-    @include media-query(md) {
-      padding: 0.5rem 0;
-
-      &::before {
-        bottom: -#{get-size(base)};
-        content: '';
-        display: block;
-        height: 30px;
-        position: absolute;
-        width: 100px;
-
-        &:hover {
-          .nav__sublist {
-            display: block;
-          }
-        }
+      @include media-query(md) {
+        align-items: center;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        padding-top: initial;
+        position: static;
       }
     }
   }
@@ -182,4 +218,40 @@
     padding: 0 24px;
     position: absolute;
   }
+
+  &__contact .button {
+    text-align: center;
+    width: 100%;
+
+    svg {
+      float: right;
+    }
+
+    @include media-query(sm) {
+      text-align: left;
+      width: initial;
+
+      svg {
+        float: none;
+      }
+    }
+  }
+
+  .social-icons {
+    padding: 1rem 0;
+
+    @include media-query(sm) {
+      margin: 0;
+      padding-top: 0;
+    }
+
+    @include media-query(md) {
+      display: none;
+    }
+
+    &__list {
+      margin-bottom: 0;
+    }
+  }
+
 }

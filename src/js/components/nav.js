@@ -10,3 +10,11 @@ document.onclick = (e) => {
         el.classList.remove('nav__button--active');
     }
 }
+
+window.addEventListener('resize', function(event){
+    const newWidth = window.innerWidth;
+
+    newWidth > 768 ? el.classList.remove('nav__button--active') : '';
+
+    console.log(newWidth);
+});

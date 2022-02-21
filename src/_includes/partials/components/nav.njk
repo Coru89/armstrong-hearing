@@ -4,57 +4,62 @@
       {% svg "nav" %}
       {% svg "close" %}
     </button>
-    <ul class="nav__list">
-      {% for item in navigation.items %}
-        {% set relAttribute = '' %}
-        {% set currentAttribute = '' %}
-        {% set currentClass = '' %}
+    <div class="nav__wrapper">
+      <ul class="nav__list">
+        {% for item in navigation.items %}
+          {% set relAttribute = '' %}
+          {% set currentAttribute = '' %}
+          {% set currentClass = '' %}
 
-        {% if item.rel %}
-          {% set relAttribute = ' rel="' + item.rel + '"' %}
-        {% endif %}
-
-        {% if page.url == (item.url + '/') %}
-          {% set currentAttribute = ' aria-current="page"' %}
-          {% set currentClass = 'nav__item--active' %}
-        {% endif %}
-        <li class="nav__item {{ currentClass | safe }}">
-          <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}
-            {% if item.items %}
-              {% svg "arrow" %}
-            {% endif %}
-          </a>
-          {% if item.items %}
-            <ul class="nav__sublist">
-              {% for item in item.items %}
-                {% set relAttribute = '' %}
-                {% set currentAttribute = '' %}
-                {% set currentClass = '' %}
-
-                {% if item.rel %}
-                  {% set relAttribute = ' rel="' + item.rel + '"' %}
-                {% endif %}
-
-                {% if page.url == (item.url + '/') %}
-                  {% set currentAttribute = ' aria-current="page"' %}
-                  {% set currentClass = 'nav__item--active' %}
-                {% endif %}
-
-                <li class="nav__item nav__item-secondary {{ currentClass | safe }}">
-                  <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
-                </li>
-              {% endfor %}
-            </ul>
+          {% if item.rel %}
+            {% set relAttribute = ' rel="' + item.rel + '"' %}
           {% endif %}
-        </li>
-      {% endfor %}
+
+          {% if page.url == (item.url + '/') %}
+            {% set currentAttribute = ' aria-current="page"' %}
+            {% set currentClass = 'nav__item--active' %}
+          {% endif %}
+          <li class="nav__item {{ currentClass | safe }}">
+            <a class="nav__item-link" href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}
+              {% if item.items %}
+                {% svg "arrow" %}
+              {% endif %}
+            </a>
+            {% if item.items %}
+              <ul class="nav__sublist">
+                {% for item in item.items %}
+                  {% set relAttribute = '' %}
+                  {% set currentAttribute = '' %}
+                  {% set currentClass = '' %}
+
+                  {% if item.rel %}
+                    {% set relAttribute = ' rel="' + item.rel + '"' %}
+                  {% endif %}
+
+                  {% if page.url == (item.url + '/') %}
+                    {% set currentAttribute = ' aria-current="page"' %}
+                    {% set currentClass = 'nav__item--active' %}
+                  {% endif %}
+
+                  <li class="nav__item nav__item-secondary {{ currentClass | safe }}">
+                    <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
         {% from "macros/macros.njk" import button_link %}
-        <li class="nav__item--contact">
+      </ul>
+        <div class="nav__secondary">
+          <div class="nav__contact">
           {{ button_link("Contact", "/contact", true) }}
-        </li>
-        <li class="nav__item--theme">
-          <theme-toggle></theme-toggle>
-        </li>
-    </ul>
+          </div>
+          {# <div class="nav__theme">
+              <theme-toggle></theme-toggle>
+            </div> #}
+          {% include "partials/components/social-icons.njk" %}
+        </div>
+    </div>
   </nav>
 {% endif %}

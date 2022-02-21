@@ -43,27 +43,3 @@
 .copyright {
   font-size: get-font-size(300);
 }
-
-.social-icons {
-  &__list {
-    display: flex;
-    justify-content: center;
-    margin-bottom: get-size(700);
-  }
-
-  &__item {
-    border-radius: 50%;
-    line-height: 0;
-    margin: 0;
-    padding: 0;
-
-    &:not(:first-child) {
-      margin-left: 0.5rem;
-    }
-
-    &:hover {
-      transform: translateY(-0.2rem);
-      box-shadow: var(--theme-box-shadow);      
-    }
-  }
-}
