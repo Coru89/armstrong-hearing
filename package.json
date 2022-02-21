@@ -1,7 +1,7 @@
 {
   "name": "armstrong-hearing",
   "version": "0.7.0",
-  "description": "A simple Eleventy starter kit to help you have a blog of your own",
+  "description": "Dedicated to identifying hearing loss and ear-related disorders, and providing appropriate hearing solutions",
   "main": "index.js",
   "scripts": {
     "sass:tokens": "npx json-to-scss src/_data/tokens.json src/scss/_tokens.scss",
@@ -19,7 +19,6 @@
     "@babel/preset-env": "^7.11.0",
     "@erquhart/rollup-plugin-node-builtins": "^2.1.5",
     "@tbranyen/jsdom": "^13.0.0",
-    "babel-jest": "^26.3.0",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
@@ -28,7 +27,6 @@
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-connect": "^5.7.0",
-    "gulp-postcss": "^8.0.0",
     "gulp-run-command": "^0.0.10",
     "gulp-sass": "^5.1.0",
     "html-minifier": "^4.0.0",
