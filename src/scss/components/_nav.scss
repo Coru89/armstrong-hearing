@@ -221,7 +221,6 @@
 
     // a level 2 nav item
     &-level-2 {
-
       &:first-child {
         border-top: 1px solid var(--color-grey);
 
@@ -270,7 +269,7 @@
         content: '';
         display: block;
         position: absolute;
-        right: calc(7rem - $triangle-size / 2);
+        right: calc(7rem - 10px);
         top: -$triangle-size;
       }
 
@@ -281,7 +280,7 @@
         content: '';
         display: block;
         position: absolute;
-        right: calc(7rem - ($triangle-size / 2 - 1px));
+        right: calc(7rem - 9px);
         top: calc(1px - $triangle-size);
       }
     }
