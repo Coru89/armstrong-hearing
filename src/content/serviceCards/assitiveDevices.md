@@ -1,6 +1,6 @@
 ---
 title: 'Assitive Devices'
-permalink: '/services/assitive-devices.html'
+permalink: '/services/assitive-devices/index.html'
 layout: 'layouts/page.njk'
 icon: 'star'
 rollupSummary: Infant hearing screenings and assessments.

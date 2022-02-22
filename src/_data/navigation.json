@@ -8,12 +8,76 @@
     {
       "text": "Services",
       "url": "/services",
-      "external": false
+      "external": false,
+      "items": [
+        {
+          "text": "Hearing Assessment",
+          "url": "/services/hearing-assessment",
+          "external": false
+        },
+        {
+          "text": "Hearing Aids",
+          "url": "/services/hearing-aids",
+          "external": false
+        },
+        {
+          "text": "Assistive Devices",
+          "url": "/services/assistive-devices",
+          "external": false
+        },
+        {
+          "text": "Third-party claims",
+          "url": "/services/third-party-claims",
+          "external": false
+        }
+      ]
     },
     {
       "text": "Resources",
       "url": "/resources",
-      "external": false
+      "external": false,
+      "items": [
+        {
+          "text": "About hearing loss",
+          "url": "/resources/about-hearing-loss",
+          "external": false
+        },
+        {
+          "text": "Noise exposure",
+          "url": "/resources/noise-exposure",
+          "external": false
+        },
+        {
+          "text": "Hearing aids and devices",
+          "url": "/resources/hearing-aids-and-devices",
+          "external": false
+        },
+        {
+          "text": "tinnitus",
+          "url": "/resources/tinnitus",
+          "external": false
+        },
+        {
+          "text": "Brain and hearing",
+          "url": "/resources/brain-and-hearing",
+          "external": false
+        },
+        {
+          "text": "Your health and hearing",
+          "url": "/resources/health-and-hearing",
+          "external": false
+        },
+        {
+          "text": "Infant hearing program",
+          "url": "/resources/infant-hearing-program",
+          "external": false
+        },
+        {
+          "text": "External resources",
+          "url": "/resources/external",
+          "external": false
+        }
+      ]
     }
   ]
 }

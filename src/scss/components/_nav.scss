@@ -35,11 +35,11 @@
 
       .nav__button {
         &--close {
-            display: block;
+          display: block;
         }
 
         &--open {
-            display: none;
+          display: none;
         }
       }
     }
@@ -91,7 +91,7 @@
       position: static;
 
       & > .nav__item {
-        margin-right: get-size(500);
+        margin-right: 2rem;
 
         &::after {
           background-color: var(--color-nav-active-accent);
@@ -137,86 +137,156 @@
     display: block;
     font-size: get-font-size(300);
     font-weight: 700;
-    padding: 2rem 0;
     position: relative;
     text-transform: uppercase;
     white-space: nowrap;
     width: 100%;
 
+    @include media-query(sm) {
+      &:hover {
+        .arrow {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
     @include media-query(md) {
       border-bottom: 0;
       padding: 0.5rem 0;
       width: initial;
+    }
 
-      &::before {
-        bottom: -#{get-size(base)};
-        content: '';
-        display: block;
-        height: 30px;
+    .arrow {
+      float: right;
+      height: 14px;
+      margin-left: get-size(300);
+      margin-top: -7px;
+      transform: rotate(90deg);
+      transition: transform 0.15s ease-in-out;
+      width: 14px;
+
+      @include media-query(sm) {
+        float: none;
+        margin-top: 0;
         position: absolute;
-        width: 100px;
+        top: calc(50% - 14px / 2); //svg height is 14px
+      }
+    }
 
+    &-link {
+      color: currentColor;
+      display: block;
+      font-weight: 600;
+      padding: 2rem 0;
+      position: relative;
+      text-decoration: none;
+
+      @include media-query(md) {
+        display: inline-block;
+        padding: initial;
+      }
+
+      &-level-2 {
+        font-weight: 500;
+        position: static;
+        text-transform: capitalize;
+      }
+    }
+
+    // a nav level 1 nav item that has level 2 nav under it
+    &--has-level-2 {
+      padding-right: 19px;
+
+      @include media-query(md) {
         &:hover {
-          .nav__sublist {
+          &::before {
+            bottom: -#{get-size(base)};
+            content: '';
             display: block;
+            height: 3rem;
+            position: absolute;
+            right: 0;
+            top: 1.5rem;
+            width: 7rem;
+          }
+
+          .nav__sublist {
+            display: grid;
           }
         }
       }
     }
 
+    // a level 2 nav item
+    &-level-2 {
 
-    &::before,
-    &::after {
-      display: none;
-    }
+      &:first-child {
+        border-top: 1px solid var(--color-grey);
 
-    .arrow {
-      margin-left: get-size(300);
-      transform: rotate(90deg);
-      transition: transform 0.15s ease-in-out;
-    }
-
-    &:hover {
-      .arrow {
-        transform: rotate(-90deg);
+        @include media-query(md) {
+          border: 0;
+        }
       }
 
-      .nav__sublist {
-        display: block;
+      &::before {
+        display: none;
       }
-    }
 
-    &-link {
-      bottom: 0;
-      color: currentColor;
-      font-weight: 600;
-      height: 4rem;
-      left: 0;
-      padding-top: 2rem;
-      position: absolute;
-      right: 0;
-      text-decoration: none;
-      top: 0;
+      &:last-child {
+        border-bottom: 0;
 
-      @include media-query(md) {
-        align-items: center;
-        display: flex;
-        height: auto;
-        justify-content: center;
-        padding-top: initial;
-        position: static;
+        @include media-query(md) {
+          border: 0;
+        }
       }
     }
   }
 
   &__sublist {
-    background: var(--color-nav-menu-bg);
-    box-shadow: var(--theme-box-shadow);
     color: var(--color-black);
     display: none;
-    margin-top: get-size(base);
-    padding: 0 24px;
-    position: absolute;
+    gap: 1rem 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+
+    $triangle-size: 13px;
+
+    @include media-query(md) {
+      background: var(--color-nav-menu-bg);
+      border: 1px solid var(--color-grey);
+      box-shadow: var(--theme-box-shadow);
+      margin-top: get-size(base);
+      padding: 1.5rem;
+      position: absolute;
+      right: -7rem;
+      top: 2.5rem;
+
+      &::before {
+        border-color: var(--color-grey) transparent;
+        border-style: solid;
+        border-width: 0 $triangle-size $triangle-size;
+        content: '';
+        display: block;
+        position: absolute;
+        right: calc(7rem - $triangle-size / 2);
+        top: -$triangle-size;
+      }
+
+      &::after {
+        border-color: var(--color-white) transparent;
+        border-style: solid;
+        border-width: 0 calc($triangle-size - 1px) calc($triangle-size - 1px);
+        content: '';
+        display: block;
+        position: absolute;
+        right: calc(7rem - ($triangle-size / 2 - 1px));
+        top: calc(1px - $triangle-size);
+      }
+    }
+
+    &--open {
+      display: block;
+    }
   }
 
   &__contact .button {
@@ -253,5 +323,4 @@
       margin-bottom: 0;
     }
   }
-
 }
