@@ -23,11 +23,6 @@
   outline: none;
 }
 
-.button:focus:not(:hover) {
-  outline-offset: -4px;
-  outline: 1px solid var(--color-action-text);
-}
-
 .button:active {
   transform: scale(0.99);
 }
