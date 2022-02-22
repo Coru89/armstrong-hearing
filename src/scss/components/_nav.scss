@@ -76,7 +76,6 @@
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     align-items: center;
-    background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -161,15 +160,18 @@
       height: 14px;
       margin-left: get-size(300);
       margin-top: -7px;
+      position: relative;
       transform: rotate(90deg);
       transition: transform 0.15s ease-in-out;
       width: 14px;
+      z-index: -1;
 
       @include media-query(sm) {
         float: none;
         margin-top: 0;
         position: absolute;
         top: calc(50% - 14px / 2); //svg height is 14px
+        z-index: 0;
       }
     }
 
