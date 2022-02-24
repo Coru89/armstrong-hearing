@@ -20,7 +20,7 @@
             {% set currentClass = 'nav__item--active' %}
           {% endif %}
           <li class="nav__item{% if item.items %} nav__item--has-level-2{% endif %} {{ currentClass | safe }}">
-            <a class="nav__item-link" href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}><span class="nav__item-link-text">{{ item.text }}</span>{% if item.items %}{% svg "arrow" %}{% endif %}</a>
+            <a class="nav__item-link" href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}><span class="nav__item-link-text">{{ item.text }}</span>{% if item.items %}{% svg "chevron" %}{% endif %}</a>
             {% if item.items %}
               <ul class="nav__sublist">
                 {% for item in item.items %}

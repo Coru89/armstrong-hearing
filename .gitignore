@@ -14,5 +14,8 @@ dist
 src/scss/_tokens.scss
 
 # Hide compiled CSS
-# src/_includes/assets/*
+
 src/_includes/css/*
+
+# Hide processed images
+src/images/processed/*

@@ -11,6 +11,7 @@ const config = require("./eleventy.config")
 const dateFilter = require('./src/filters/date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
+const sortByOrder = require('./src/filters/sort-by-order.js');
 
 
 // Import data files
@@ -58,6 +59,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dateFilter', dateFilter);
   eleventyConfig.addFilter('markdownFilter', markdownFilter);
   eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
+  eleventyConfig.addFilter("sortByOrder", sortByOrder);
 
   // Layout aliases
   eleventyConfig.addLayoutAlias('home', 'layouts/home.njk');
@@ -65,12 +67,12 @@ module.exports = function (eleventyConfig) {
   // watch sass
   eleventyConfig.addWatchTarget('src/scss');
   eleventyConfig.addWatchTarget('src/images');
-  // eleventyConfig.addWatchTarget('src/img');
+  eleventyConfig.addWatchTarget('dist/img');
 
   // Passthrough copy
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/js');
-  eleventyConfig.addPassthroughCopy('src/img');
+  eleventyConfig.addPassthroughCopy('src/images');
   eleventyConfig.addPassthroughCopy('src/admin/eleventyConfig.yml');
   eleventyConfig.addPassthroughCopy('src/admin/previews.js');
   eleventyConfig.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
@@ -92,10 +94,17 @@ module.exports = function (eleventyConfig) {
   //     .slice(0, site.maxPostsPerPage);
   // });
 
-  eleventyConfig.addCollection('serviceCards', (collection) => {
-    return [...collection.getFilteredByGlob('./src/content/serviceCards/*.md').filter(livePosts)]
-      .reverse()
-      .slice(0, site.maxPostsPerPage);
+  eleventyConfig.addCollection('services', (collection) => {
+    return [...collection.getFilteredByGlob('./src/content/services/*.md').filter(livePosts)]
+      // .reverse()
+      // .slice(0, site.maxPostsPerPage);
+  });
+
+  eleventyConfig.addCollection('resources', (collection) => {
+    return [...collection.getFilteredByGlob('./src/content/resources/*.md')]
+      
+      // .reverse()
+      // .slice(0, site.maxPostsPerPage);
   });
 
   // import all macros into posts / pages (minus index) so that end user doesn not need to for each page

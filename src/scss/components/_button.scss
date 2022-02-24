@@ -39,3 +39,8 @@
     margin-left: .5rem;
   }
 }
+
+.button--reverse {
+  background-color: var(--color-theme-primary);
+  color: var(--color-white);
+}

@@ -4,10 +4,12 @@ const Image = require("@11ty/eleventy-img");
 // .eleventy.js
 function generateImages(src, widths){
   let source = `./src/images/${src}`;
+
   let options = {
     widths: widths,
     formats: ['jpeg'],
-    outputDir: "./dist/img/",
+    outputDir: "./src/images/processed",
+    urlPath: "/images/processed",
     useCache: true
   };
   // genrate images, ! dont wait

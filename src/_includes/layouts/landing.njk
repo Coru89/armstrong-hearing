@@ -12,11 +12,12 @@
         heroSummary: bannerSummary,
         heroImage: bannerImage
       }) }}
-      {# <div class="post__body">
+      {{ component('card-roll-up', {
+        collection: collections[collectionName]
+      }) }}
+      <div class="post__body">
         {{ content | safe }}
-      </div> #}
+      </div>
     </article>
   </main>
 {% endblock %}
-
-{{ content | safe }}

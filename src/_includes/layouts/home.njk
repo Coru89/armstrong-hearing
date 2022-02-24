@@ -10,13 +10,13 @@
 {% set postListItems = collections.postFeed %}
 
 {# {% set serviceHeading = serviceHeading %} #}
-{% set serviceCardItems = collections.serviceCards %}
+{% set serviceCardItems = collections.services %}
 
 {# Archive link #}
-{% if postListItems.length < collections.posts.length %}
+{# {% if postListItems.length < collections.posts.length %}
   {% set paginationNextText = archiveButtonText %}
   {% set paginationNextUrl = '/archive' %}
-{% endif %}
+{% endif %} #}
 
 {% block content %}
   <main id="main-content" tabindex="-1">
