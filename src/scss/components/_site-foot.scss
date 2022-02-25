@@ -23,8 +23,10 @@
     @include panel-container;
 
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
 
     @include media-query(md) {
       display: flex;
