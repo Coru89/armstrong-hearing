@@ -1,9 +1,23 @@
 .site-foot {
   // Reverse whatever the theme colors are
   background: var(--color-bg-light);
-  border-top: 1px solid var(--color-stroke);
   color: var(--color-text);
-  padding: 13.5rem 0 5rem 0;
+  padding: 5.5rem 0 4rem 0;
+  position: relative;
+
+  &::before {
+    background-image: url(/images/logos/logo-pattern.svg);
+    background-position: 0 -28px;
+    background-repeat: repeat;
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   &__wrapper {
     @include panel-container;
@@ -17,18 +31,13 @@
     }
   }
 
-  &__details {
-    --flow-space: 1em;
-    max-width: 40ch;
+  &__row {
+    text-align: center;
+  }
 
-    > * + * {
-      margin-top: 1em;
-      margin-top: var(--flow-space);
-    }
-
-    h2 {
-      font-size: get-font-size(600);
-    }
+  &__tagline {
+    font-weight: 300;
+    padding-bottom: 8rem;
   }
 
   a {
@@ -38,6 +47,12 @@
       text-decoration: none;
     }
   }
+
+  .site__logo {
+    height: 42px;
+    width: auto;
+  }
+
 }
 
 .copyright {

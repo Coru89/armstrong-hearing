@@ -12,12 +12,12 @@
     padding: 0;
 
     &:not(:first-child) {
-      margin-left: 0.5rem;
+      margin-left: 0.75rem;
     }
 
     &:hover {
-      transform: translateY(-0.2rem);
       box-shadow: var(--theme-box-shadow-bottom);      
+      transform: translateY(-0.1rem);
     }
   }
 }

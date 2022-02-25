@@ -29,7 +29,7 @@
     }
   }
 
-  &__logo {
+  .site__logo {
     height: 35px;
     width: auto;
     display: none;
@@ -54,18 +54,18 @@
 }
 
 // @include dark-mode {
-//   .site-head__logo {
+//   .site__logo {
 //     display: none;
 //   }
 
-//   .site-head__logo--dark {
+//   .site__logo--dark {
 //     display: none;
 
 //     @include media-query(xl) {
 //       display: block;
 //     }
 //   }
-//   .site-head__logo--stacked.site-head__logo--dark {
+//   .site__logo--stacked.site__logo--dark {
 //     display: block;
 
 //     @include media-query(xl) {

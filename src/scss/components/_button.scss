@@ -12,11 +12,18 @@
   margin: 0;
   padding: 0.7rem calc(get-size('base') - 0.1rem);
   text-decoration: none;
+  transition: background-color .1s ease-in, border-color .1s ease-in, color .1s ease-in;
 }
 
 .button:hover,
 .button:focus {
-  filter: brightness(1.2);
+  background-color: var(--color-theme-primary);
+  border-color: var(--color-theme-primary);
+  color: var(--color-white);
+
+  svg {
+    stroke: var(--color-white);
+  }
 }
 
 .button:focus:hover {
@@ -33,9 +40,14 @@
 
   &:hover {
     filter: none;
+
+    svg {
+      animation: arrow-animation .3s;
+    }
   }
 
   svg {
+    stroke: var(--color-theme-primary);
     margin-left: .5rem;
   }
 }
@@ -43,4 +55,11 @@
 .button--reverse {
   background-color: var(--color-theme-primary);
   color: var(--color-white);
+}
+
+
+@keyframes arrow-animation {
+  0%   { transform: translateX(0); }
+  50%   { transform: translateX(3px); }
+  100%  { transform: translateX(0); }
 }
