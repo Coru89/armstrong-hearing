@@ -10,7 +10,7 @@ sections:
   path: src/index.md
   label: Home
 - type: directory
-  path: src/content/serviceCards
+  path: src/content/services
   label: Services
   create: all
   match: "*.md"
