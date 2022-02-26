@@ -4,6 +4,12 @@ permalink: "/who-we-are/index.html"
 layout: layouts/page.njk
 bannerSummary: 
 bannerImage: banner.png
+page_sections:
+- template: image-text-panel
+  imagealt: Armstrong Hearing Office
+  imageURL: location.png
+  buttontext: Say Hello
+  buttonpath: "/contact"
 
 ---
 Armstrong Audiology & Hearing Aid Clinic is a family owned and operated business located in the heart of Sault Ste Marie, Ontario. Kathryn and Matthew Armstrong, a mother and son duo, will take care of all your needs and make sure that you leave hearing and feeling better than ever.
