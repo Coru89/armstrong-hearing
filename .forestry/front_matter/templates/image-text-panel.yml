@@ -7,7 +7,7 @@ fields:
   config:
     required: false
   label: Image URL
-- name: imagealt
+- name: imagAlt
   type: text
   config:
     required: false
@@ -17,20 +17,32 @@ fields:
   default: []
   config:
     required: false
-    options: []
+    options:
+    - right
+    - left
     source:
       type: simple
       section: 
       file: 
       path: 
   label: Image Position
-- name: buttontext
+- name: buttonText
   type: text
   config:
     required: false
   label: buttonText
-- name: buttonpath
+- name: buttonPath
   type: text
   config:
     required: false
   label: buttonPath
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: summary
+  type: text
+  config:
+    required: false
+  label: summary
