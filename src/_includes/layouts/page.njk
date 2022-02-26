@@ -12,9 +12,25 @@
         heroSummary: bannerSummary,
         heroImage: bannerImage
       }) }}
-      {# <div class="post__body">
+      <div class="post__body">
         {{ content | safe }}
-      </div> #}
+        {% for block in page_sections %}
+          {% if block.template === 'image-text-panel' %}
+            {{ component('image-text-panel', {
+              heading: block.title,
+              summary: block.summary,
+              buttonText: block.buttonText,
+              buttonPath: block.buttonPath,
+              imageURL: block.imageURL,
+              imageAlt: block.imagealt,
+              imagePosition: block.imagePosition
+            }) }}
+            
+          {% elseif block.template === 'text-area' %}
+            <p>{{ block.text }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
     </article>
   </main>
 {% endblock %}
