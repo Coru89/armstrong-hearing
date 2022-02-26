@@ -35,6 +35,11 @@ window.addEventListener('resize', function () {
 // add event listeners to nav items which have nested level 2 navigation  
 elSecondaryNav.forEach((el) => {
   el.addEventListener('click', function (e) {
+    //only apply for mobile
+    if (window.innerWidth > 768) {
+      return;
+    }
+
     // disable clicking into landing pages on mobile. the top level nav item click instead acts like an accordion
     if (window.innerWidth < 768) {
       e.preventDefault();
