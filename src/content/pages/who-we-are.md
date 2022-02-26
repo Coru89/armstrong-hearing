@@ -25,6 +25,8 @@ page_sections:
     located in the heart of Sault Ste Marie, Ontario. Kathryn and Matthew Armstrong,
     a mother and son duo, will take care of all your needs and make sure that you
     leave hearing and feeling better than ever.
+- template: blockquote
+  text: The sound and music are 50% of the entertainment in a movie.
 - template: image-with-caption
   image: "/images/banner2.png"
   imageAlt: Mother and son at Armstrong hearing
@@ -35,7 +37,5 @@ page_sections:
     With only one clinic to run and operate, we promise to give you our full professional attention from the moment you think you need an appointment, through consultations, fittings, repairs and more.
 
     Our patients become family members that we treat with the utmost respect and care.
-- template: blockquote
-  text: The sound and music are 50% of the entertainment in a movie.
 
 ---
