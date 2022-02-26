@@ -5,9 +5,9 @@ fields:
 - type: text
   name: title
   label: title
-- name: test
+- name: page_sections
   type: blocks
-  label: test
+  label: Page Sections
   template_types: []
   config:
     min: 
