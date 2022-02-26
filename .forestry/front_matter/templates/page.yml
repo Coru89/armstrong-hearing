@@ -8,7 +8,8 @@ fields:
 - name: page_sections
   type: blocks
   label: Page Sections
-  template_types: []
+  template_types:
+  - image-text-panel
   config:
     min: 
     max: 
