@@ -28,5 +28,9 @@ page_sections:
 
     Our patients become family members that we treat with the utmost respect and care.
 - template: image-with-caption
+  image: "/images/armstrongs.png"
+  imageAlt: Mother and son at Armstrong hearing
+  fullBleed: true
+  imageCaption: Mother and son at Armstrong hearing
 
 ---
