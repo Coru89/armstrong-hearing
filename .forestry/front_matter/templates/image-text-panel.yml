@@ -1,4 +1,36 @@
 ---
 label: Image Text Panel
 hide_body: true
-fields: []
+fields:
+- name: imageURL
+  type: text
+  config:
+    required: false
+  label: Image URL
+- name: imagealt
+  type: text
+  config:
+    required: false
+  label: imageAlt
+- name: imagePosition
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Image Position
+- name: buttontext
+  type: text
+  config:
+    required: false
+  label: buttonText
+- name: buttonpath
+  type: text
+  config:
+    required: false
+  label: buttonPath
