@@ -90,7 +90,7 @@
     pre > code,
     .video-player,
     video {
-      max-width: map-get($metrics, 'wrap-max-width');
+      max-width: 52rem;
       margin-left: 50%; /*changing this value to 47% removes the horizontal scrollbar once the viewport is < 930px */
       position: relative;
       transform: translateX(
@@ -115,7 +115,7 @@
       font-size: 0.8em;
       font-style: italic;
       margin: 0.5rem auto 0 auto;
-      max-width: map-get($metrics, 'wrap-inner-max-width');
+      max-width: 52rem;
       padding: 0 get-size(500);
     }
 
@@ -157,4 +157,10 @@
       padding: 0.4rem 0.6rem;
     }
   }
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }

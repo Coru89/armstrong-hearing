@@ -11,7 +11,7 @@ exports.imageShortCode = (src, alt, cls, loading, sizes, widths) => {
     };
 
     // generate images, while this is async we don’t wait
-    Image(`./src/images/${src}`, options);
+    Image(`./src/${src}`, options);
 
     let imageAttributes = {
       alt,
@@ -22,8 +22,9 @@ exports.imageShortCode = (src, alt, cls, loading, sizes, widths) => {
 
     cls === '' || null ? '' : imageAttributes.class = cls;
 
+
     // get metadata even the images are not fully generated
-    let metadata = Image.statsSync(`./src/images/${src}`, options);
+    let metadata = Image.statsSync(`./src/${src}`, options);
     return Image.generateHTML(metadata, imageAttributes);
   }
 

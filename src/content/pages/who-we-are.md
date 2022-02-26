@@ -3,7 +3,7 @@ title: Who we are
 permalink: "/who-we-are/index.html"
 layout: layouts/page.njk
 bannerSummary: 
-bannerImage: banner.png
+bannerImage: "/images/banner.png"
 page_sections:
 - template: image-text-panel
   title: Hello World
@@ -16,7 +16,7 @@ page_sections:
     more. Our patients become family members that we treat with the utmost respect
     and care.
   imagealt: Armstrong Hearing Office
-  imageURL: location.png
+  imageURL: "/images/location.png"
   imagePosition: right
   buttonText: Say Hello :)
   buttonPath: "/contact"
@@ -28,9 +28,9 @@ page_sections:
 
     Our patients become family members that we treat with the utmost respect and care.
 - template: image-with-caption
-  image: "/images/armstrongs.png"
+  image: "/images/banner2.png"
   imageAlt: Mother and son at Armstrong hearing
-  fullBleed: true
+  fullBleed: false
   imageCaption: Mother and son at Armstrong hearing
 
 ---

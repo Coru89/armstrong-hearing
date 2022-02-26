@@ -7,12 +7,12 @@ title: Hear better. Live better.
 bannerSummary: We’re dedicated to identifying hearing loss and ear-related disorders,
   and providing appropriate hearing solutions whether through hearing aids, assistive
   listening devices, hearing protection or rehabilitation counselling.
-bannerImage: banner.png
+bannerImage: "/images/banner.png"
 serviceHeading: Hearing Services
 serviceButtonText: View all services
 serviceButtonPath: '/services'
 panelTitle1: Infant Hearing Program
-panelImage1: kids.png
+panelImage1: "/images/kids.png"
 panelImageDescription1: kids playing
 panelSummary1: Kathryn Armstrong is a Northern Ontario representative for the Infant
   Hearing Program. The Infant Hearing Program (IHP) is an early hearing detection
@@ -24,7 +24,7 @@ panelButtonText1: Read the story
 panelButtonPath1: "/services"
 panelImagePosition1: right
 panelTitle2: Locally owned and operated
-panelImage2: location.png
+panelImage2: "/images/location.png"
 panelImageDescription2: Armstrong Hearing Office
 panelSummary2: We, Matthew and Kathryn Armstrong, are the proud owners of Armstrong
   Hearing; an Audiology and Hearing Aid Clinic committed to helping those hard of
