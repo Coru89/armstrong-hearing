@@ -1,12 +1,12 @@
 const config = require("../../../eleventy.config")
 const Image = require("@11ty/eleventy-img");
 
-exports.imageShortCode = (src, alt, loading, sizes, widths) => {
+exports.imageShortCode = (src, alt, cls, loading, sizes, widths) => {
     let options = {
       widths: widths,
       formats: ['webp', 'jpeg'],
-      outputDir: "./src/images/processed",
-      urlPath: "/images/processed",
+      outputDir: "./src/images-processed",
+      urlPath: "/images-processed",
       useCache: true
     };
 
@@ -19,6 +19,9 @@ exports.imageShortCode = (src, alt, loading, sizes, widths) => {
       loading,
       widths
     };
+
+    cls === '' || null ? '' : imageAttributes.class = cls;
+
     // get metadata even the images are not fully generated
     let metadata = Image.statsSync(`./src/images/${src}`, options);
     return Image.generateHTML(metadata, imageAttributes);
@@ -30,5 +33,5 @@ exports.imageShortCode = (src, alt, loading, sizes, widths) => {
  * @param {object} eleventyConfig Eleventy's configuration object
  */
   exports.default = (eleventyConfig) => {
-    eleventyConfig.addShortcode("image", (src, alt, loading, sizes, widths) => exports.imageShortCode(src, alt, loading, sizes, widths))
+    eleventyConfig.addShortcode("image", (src, alt, cls, loading, sizes, widths) => exports.imageShortCode(src, alt, cls, loading, sizes, widths))
   }

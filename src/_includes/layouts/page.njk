@@ -14,22 +14,7 @@
       }) }}
       <div class="post__body">
         {{ content | safe }}
-        {% for block in page_sections %}
-          {% if block.template === 'image-text-panel' %}
-            {{ component('image-text-panel', {
-              title: block.title,
-              summary: block.summary,
-              buttonText: block.buttonText,
-              buttonPath: block.buttonPath,
-              imageURL: block.imageURL,
-              imageAlt: block.imagealt,
-              imagePosition: block.imagePosition
-            }) }}
-            
-          {% elseif block.template === 'text-area' %}
-            <p>{{ block.text }}</p>
-          {% endif %}
-        {% endfor %}
+        {% include 'partials/components/page-sections.njk' %}
       </div>
     </article>
   </main>

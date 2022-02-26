@@ -8,8 +8,8 @@ function generateImages(src, widths){
   let options = {
     widths: widths,
     formats: ['jpeg'],
-    outputDir: "./src/images/processed",
-    urlPath: "/images/processed",
+    outputDir: "./src/images-processed",
+    urlPath: "/images-processed",
     useCache: true
   };
   // genrate images, ! dont wait
