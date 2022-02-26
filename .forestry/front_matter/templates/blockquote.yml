@@ -1,4 +1,9 @@
 ---
 label: blockquote
-hide_body: false
-fields: []
+hide_body: true
+fields:
+- name: text
+  type: text
+  config:
+    required: false
+  label: Text
