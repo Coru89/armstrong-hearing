@@ -27,5 +27,6 @@ page_sections:
     With only one clinic to run and operate, we promise to give you our full professional attention from the moment you think you need an appointment, through consultations, fittings, repairs and more.
 
     Our patients become family members that we treat with the utmost respect and care.
+- template: image-with-caption
 
 ---
