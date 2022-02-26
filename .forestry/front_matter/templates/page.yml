@@ -12,6 +12,7 @@ fields:
   - text-area
   - image-text-panel
   - image-with-caption
+  - blockquote
   config:
     min: 
     max: 
