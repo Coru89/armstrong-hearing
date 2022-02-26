@@ -2,11 +2,6 @@
 label: Image Text Panel
 hide_body: true
 fields:
-- name: imageURL
-  type: text
-  config:
-    required: false
-  label: Image URL
 - name: imagAlt
   type: text
   config:
@@ -46,3 +41,8 @@ fields:
   config:
     required: false
   label: summary
+- name: imageurl
+  type: file
+  config:
+    maxSize: 5
+  label: imageURL
