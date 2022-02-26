@@ -9,8 +9,9 @@ fields:
   type: blocks
   label: Page Sections
   template_types:
-  - image-text-panel
   - text-area
+  - image-text-panel
+  - image-with-caption
   config:
     min: 
     max: 
