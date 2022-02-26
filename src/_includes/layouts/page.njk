@@ -17,7 +17,7 @@
         {% for block in page_sections %}
           {% if block.template === 'image-text-panel' %}
             {{ component('image-text-panel', {
-              heading: block.title,
+              title: block.title,
               summary: block.summary,
               buttonText: block.buttonText,
               buttonPath: block.buttonPath,
