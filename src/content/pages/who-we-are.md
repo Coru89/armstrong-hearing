@@ -32,5 +32,7 @@ page_sections:
   imageAlt: Mother and son at Armstrong hearing
   fullBleed: false
   imageCaption: Mother and son at Armstrong hearing
+- template: blockquote
+  text: The sound and music are 50% of the entertainment in a movie.
 
 ---
