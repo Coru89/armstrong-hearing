@@ -29,6 +29,13 @@ page_sections:
     email: kathryn@armstronghearing.ca
     phone: "+17052537111"
     phoneDisplay: "(705) 253-7111"
+  - photo: "/images/matthew-armstrong.jpg"
+    photoAlt: Matthew Armstrong
+    name: Matthew Armstrong
+    title: Hearing Instrument Specialist | Reg. A.H.I.P.
+    email: matt@armstronghearing.ca
+    phone: "+17052537111"
+    phoneDisplay: "(705) 253-7111"
 - template: image-with-caption
   image: "/images/banner.png"
   imageAlt: Full width image
