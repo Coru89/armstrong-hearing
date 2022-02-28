@@ -4,6 +4,7 @@ permalink: '/resources/health-and-hearing/index.html'
 layout: 'layouts/page.njk'
 order: 5
 rollupImage: "/images/banner2.png"
+rollupImageAlt:
 rollupSummary: Lorem ipsum dolor sit amet consectetur adipisicing elit.
 bannerSummary: Lorem ipsum dolor sit amet consectetur adipisicing elit.
 bannerImage: "/images/banner.png"

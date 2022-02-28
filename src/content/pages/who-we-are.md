@@ -21,7 +21,7 @@ page_sections:
   buttonText: Say Hello :)
   buttonPath: "/contact"
 - template: bio-cards
-  bio_cards:
+  bioCards:
   - photo: "/images/kathryn-armstrong.jpg"
     photoAlt: Kathryn Armstrong
     name: Kathryn Armstrong
