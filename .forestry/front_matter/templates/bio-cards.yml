@@ -2,7 +2,7 @@
 label: Bio Cards
 hide_body: true
 fields:
-- name: bio_cards
+- name: bioCards
   type: field_group_list
   fields:
   - name: photo
