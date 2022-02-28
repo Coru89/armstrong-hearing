@@ -73,7 +73,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/images');
-  eleventyConfig.addPassthroughCopy('src/images-processed');
+  eleventyConfig.addPassthroughCopy('src/imagesProcessed');
   eleventyConfig.addPassthroughCopy('src/admin/eleventyConfig.yml');
   eleventyConfig.addPassthroughCopy('src/admin/previews.js');
   eleventyConfig.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');

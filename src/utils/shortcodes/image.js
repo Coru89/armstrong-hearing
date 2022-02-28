@@ -5,8 +5,8 @@ exports.imageShortCode = (src, alt, cls, loading, sizes, widths) => {
     let options = {
       widths: widths,
       formats: ['webp', 'jpeg'],
-      outputDir: "./src/images-processed",
-      urlPath: "/images-processed",
+      outputDir: "./src/imagesProcessed",
+      urlPath: "/imagesProcessed",
       useCache: true
     };
 
