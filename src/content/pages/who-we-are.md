@@ -20,6 +20,15 @@ page_sections:
   imagePosition: right
   buttonText: Say Hello :)
   buttonPath: "/contact"
+- template: bio-cards
+  bio_cards:
+  - photo: "/images/kathryn-armstrong.jpg"
+    photoAlt: Kathryn Armstrong
+    name: Kathryn Armstrong
+    title: Audiologist | M.A., Reg. CASLPO
+    email: kathryn@armstronghearing.ca
+    phone: "+17052537111"
+    phoneDisplay: "(705) 253-7111"
 - template: image-with-caption
   image: "/images/banner.png"
   imageAlt: Full width image
