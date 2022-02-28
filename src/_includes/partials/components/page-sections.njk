@@ -11,7 +11,7 @@
     }) }}
     
     {% elseif block.template === 'text-area' %}
-        <p>{{ block.text }}</p>
+        {{ block.text | safe }}
 
     {% elseif block.template === 'image-with-caption' %}
         {{ component('image-with-caption', {
@@ -19,6 +19,11 @@
             imageAlt: block.imageAlt,
             imageCaption: block.imageCaption,
             fullBleed: block.fullBleed
+        }) }}
+
+    {% elseif block.template === 'bio-cards' %}
+        {{ component('bio-cards', {
+            bioCards: block.bioCards
         }) }}
 
     {% elseif block.template === 'blockquote' %}

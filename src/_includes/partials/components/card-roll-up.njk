@@ -7,7 +7,7 @@
             <div class="card-roll-up__item">
               {% if item.data.rollupImage.length %}
                 <div class="card-roll-up__image-wrapper">
-                  {% image item.data.rollupImage, "placeholder", null, "lazy", "(min-width: 36rem) 100vw, 50vw", ['400', '450', '500'] %}
+                  {% image item.data.rollupImage, item.data.rollupImageAlt, null, "lazy", "(min-width: 36rem) 100vw, 50vw", ['400', '450', '500'] %}
                 </div>
               {% endif %}
               <div class="card-roll-up__lower">
