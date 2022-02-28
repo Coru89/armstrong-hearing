@@ -1,0 +1,34 @@
+
+{% if props.bioCards %}
+  <section class="bio-card-roll-up">
+    <div class="bio-card-roll-up__inner">
+      <div class="bio-card-roll-up__items">
+        {% for item in props.bioCards %}
+          <a href="{{ item.url }}" class="bio-card-roll-up__link" rel="bookmark">
+            <div class="bio-card-roll-up__item">
+              {% if item.photo.length %}
+                <div class="bio-card-roll-up__image-wrapper">
+                  {% image item.photo, item.photoAlt, null, "lazy", "(min-width: 36rem) 100vw, 50vw", ['400', '450', '500', '650'] %}
+                </div>
+              {% endif %}
+              <div class="bio-card-roll-up__lower">
+                <div class="bio-card-roll-up__item-name">
+                  {{item.name}}
+                </div>
+                <div class="bio-card-roll-up__item-title">
+                  {{item.title}}
+                </div>
+                <div class="bio-card-roll-up__item-email">
+                  <a href="mailto:{{item.email}}">{{item.email}}</a>
+                </div>
+                <div class="bio-card-roll-up__item-email">
+                  <a href="tel:{{item.phone}}">{{item.phoneDisplay}}</a>
+                </div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
