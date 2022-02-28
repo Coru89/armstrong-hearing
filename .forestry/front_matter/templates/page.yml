@@ -13,6 +13,7 @@ fields:
   - image-text-panel
   - image-with-caption
   - blockquote
+  - bio-cards
   config:
     min: 
     max: 
