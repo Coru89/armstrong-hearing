@@ -42,5 +42,28 @@ page_sections:
     With only one clinic to run and operate, we promise to give you our full professional attention from the moment you think you need an appointment, through consultations, fittings, repairs and more.
 
     Our patients become family members that we treat with the utmost respect and care.
+- template: text-area
+  text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu mauris
+    auctor, tempor enim in, dignissim odio. Morbi suscipit augue eu mattis dapibus.
+    Vivamus sollicitudin mattis finibus. Vivamus nec urna vel lectus ornare rutrum.
+    Pellentesque tempor est purus. Suspendisse efficitur lacus sed risus pretium venenatis.
+    Phasellus tempus libero elit, ut hendrerit quam condimentum quis. Cras eu metus
+    orci. Sed erat ex, condimentum ut quam sed, maximus euismod risus. Pellentesque
+    tempus quis dui quis congue. Pellentesque interdum mattis odio vel imperdiet.
+    Duis quis tellus vitae neque elementum posuere et at nibh. Pellentesque ligula
+    ipsum, euismod a commodo quis, sagittis eget eros. Nunc sed dictum nisl, vel malesuada
+    odio. Mauris blandit a metus fringilla placerat. Donec sit amet nisi est.</p><p>Ut
+    quis dui id lacus commodo vehicula eu sit amet diam. Vestibulum urna ex, consectetur
+    vel ipsum ac, gravida rutrum nulla. Etiam eu maximus nulla, eget venenatis turpis.
+    Aenean tempor ligula vel nibh laoreet aliquam. Aliquam viverra cursus semper.
+    Morbi at iaculis ipsum. Aenean porttitor tempor ipsum vitae malesuada.</p><p>Fusce
+    vitae nunc at nisi efficitur varius. Sed interdum tristique sagittis. Sed mollis
+    sapien at dolor pulvinar, in rhoncus turpis tempor. Etiam ut sem eu dui faucibus
+    fringilla. Maecenas in imperdiet sapien. Etiam ultrices suscipit arcu sit amet
+    cursus. Praesent lacinia neque quis mi rutrum ultrices. Lorem ipsum dolor sit
+    amet, consectetur adipiscing elit. Nulla id gravida orci. Phasellus dolor diam,
+    efficitur sit amet suscipit eget, commodo ut ex. Morbi at mi eleifend, condimentum
+    lectus sed, gravida nisl. Etiam pellentesque vel risus id rhoncus. Curabitur sagittis
+    tincidunt turpis, nec porta ex. Vivamus quis turpis vel nisl laoreet sodales.</p>"
 
 ---
