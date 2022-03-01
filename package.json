@@ -4,7 +4,7 @@
   "description": "Dedicated to identifying hearing loss and ear-related disorders, and providing appropriate hearing solutions",
   "main": "index.js",
   "scripts": {
-    "sass:tokens": "npx json-to-scss src/_data/tokens.json src/scss/_tokens.scss",
+    "sass:tokens": "npx json-to-scss src/_data/tokens.json src/scss/tokens.scss",
     "start": "npx gulp && concurrently \"npm run sass:tokens -- --watch\" \"npx gulp watch\" \"npx eleventy --serve\"",
     "production": "npm run sass:tokens && NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
   },
