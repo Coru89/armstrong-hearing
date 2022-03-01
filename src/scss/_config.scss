@@ -1,5 +1,3 @@
-@import 'tokens';
-
 $breakpoints: map-get($tokens, 'breakpoints');
 $breakpoints-config: (
    'sm': '(min-width: 36em)',
