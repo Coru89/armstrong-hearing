@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/images');
   eleventyConfig.addPassthroughCopy('src/served');
-  eleventyConfig.addPassthroughCopy('src/admin/eleventyConfig.yml');
+  eleventyConfig.addPassthroughCopy('src/admin/config.yml');
   eleventyConfig.addPassthroughCopy('src/admin/previews.js');
   eleventyConfig.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
@@ -126,7 +126,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // Forestry instant previews
-  if (process.env.ELEVENTY_ENV == 'dev') {
+  if (process.env.ELEVENTY_ENV == 'staging') {
     eleventyConfig.setBrowserSyncConfig({
       host: '0.0.0.0',
     });
