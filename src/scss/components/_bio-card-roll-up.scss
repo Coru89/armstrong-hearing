@@ -1,0 +1,65 @@
+.bio-card-roll-up {
+    padding: 3.25rem 0 6rem;
+
+    &__inner {
+        margin: auto;
+        max-width: 58rem;
+        text-align: center;
+    }
+
+    &__heading {
+        font-weight: 500;
+        padding-bottom: 3rem;
+    }
+
+    &__items {
+        @include media-query(sm) {
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        box-shadow: var(--theme-box-shadow);
+        text-align: center;
+
+        &-name {
+            color: var(--color-black);
+            font-size: get-font-size(500);
+            font-weight: 700;
+            padding-bottom: .5rem;
+
+            @include media-query(md) {
+                font-size: get-font-size(600);
+            }
+        }
+
+        &-email,
+        &-phone,
+        &-title {
+            font-size: get-font-size(300);
+
+            @include media-query(md) {
+                font-size: get-font-size(base);
+            }
+        }
+    }
+
+    &__lower {
+        padding: 1rem;
+
+        @include media-query(sm) {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            justify-content: space-between;
+        }
+    }
+
+    &__image-wrapper {
+        padding: 1.5rem 1rem 0;
+    }
+
+}
+

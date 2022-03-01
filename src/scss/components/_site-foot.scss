@@ -13,7 +13,7 @@
     display: block;
     height: 100%;
     left: 0;
-    opacity: 0.05;
+    opacity: 0.03;
     position: absolute;
     top: 0;
     width: 100%;
@@ -51,10 +51,24 @@
   }
 
   .site__logo {
+    display:  none;
     height: 42px;
+    margin-bottom: .5rem;
     width: auto;
-  }
 
+    @include media-query(sm) {
+      display:  initial;
+    }
+
+    &--stacked {
+      display: initial;
+      height: 80px;
+
+      @include media-query(sm) {
+        display:  none;
+      }
+    }
+  }
 }
 
 .copyright {

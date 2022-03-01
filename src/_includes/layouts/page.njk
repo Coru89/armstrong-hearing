@@ -6,17 +6,17 @@
 
 {% block content %}
   <main id="main-content" tabindex="-1">
-    <article class="post">
-      {{ component('hero', {
-        heroHeading: title,
-        heroSummary: bannerSummary,
-        heroImage: bannerImage
-      }) }}
-      <div class="post__body">
-        {{ content | safe }}
-        {% include 'partials/components/page-sections.njk' %}
-      </div>
-    </article>
+
+    {{ component('hero', {
+      heroHeading: title,
+      heroSummary: bannerSummary,
+      heroImage: bannerImage
+    }) }}
+    <div class="page__body">
+      {{ content | safe }}
+      {% include 'partials/components/page-sections.njk' %}
+    </div>
+
   </main>
 {% endblock %}
 

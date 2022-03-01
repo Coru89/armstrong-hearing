@@ -2,31 +2,26 @@
 {% if props.bioCards %}
   <section class="bio-card-roll-up">
     <div class="bio-card-roll-up__inner">
+      <h2 class="bio-card-roll-up__heading">{{ props.heading }}</h2>
       <div class="bio-card-roll-up__items">
         {% for item in props.bioCards %}
-          <a href="{{ item.url }}" class="bio-card-roll-up__link" rel="bookmark">
-            <div class="bio-card-roll-up__item">
-              {% if item.photo.length %}
-                <div class="bio-card-roll-up__image-wrapper">
-                  {% image item.photo, item.photoAlt, null, "lazy", "(min-width: 36rem) 100vw, 50vw", ['400', '450', '500', '650'] %}
-                </div>
-              {% endif %}
-              <div class="bio-card-roll-up__lower">
-                <div class="bio-card-roll-up__item-name">
-                  {{item.name}}
-                </div>
-                <div class="bio-card-roll-up__item-title">
-                  {{item.title}}
-                </div>
-                <div class="bio-card-roll-up__item-email">
-                  <a href="mailto:{{item.email}}">{{item.email}}</a>
-                </div>
-                <div class="bio-card-roll-up__item-email">
-                  <a href="tel:{{item.phone}}">{{item.phoneDisplay}}</a>
-                </div>
+          <div class="bio-card-roll-up__item">
+            {% if item.photo.length %}
+              <div class="bio-card-roll-up__image-wrapper">
+                {% image item.photo, item.photoAlt, null, "lazy", "(min-width: 36rem) 100vw, 50vw", ['400', '450', '500', '650'] %}
               </div>
+            {% endif %}
+            <div class="bio-card-roll-up__lower">
+              <div class="bio-card-roll-up__item-name">
+                {{item.name}}
+              </div>
+              <div class="bio-card-roll-up__item-title">
+                {{item.title}}
+              </div>
+                <a class="bio-card-roll-up__item-email" href="mailto:{{item.email}}">{{item.email}}</a>
+                <a class="bio-card-roll-up__item-phone" href="tel:{{item.phone}}">{{item.phoneDisplay}}</a>
             </div>
-          </a>
+          </div>
         {% endfor %}
       </div>
     </div>

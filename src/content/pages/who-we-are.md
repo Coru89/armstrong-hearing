@@ -21,6 +21,7 @@ page_sections:
   buttonText: Say Hello :)
   buttonPath: "/contact"
 - template: bio-cards
+  heading: Meet the team
   bioCards:
   - photo: "/images/kathryn-armstrong.jpg"
     photoAlt: Kathryn Armstrong
@@ -42,10 +43,10 @@ page_sections:
   fullBleed: true
   imageCaption: Full width image
 - template: text-area
-  text: Armstrong Audiology & Hearing Aid Clinic is a family owned and operated business
+  text: "<p>Armstrong Audiology & Hearing Aid Clinic is a family owned and operated business
     located in the heart of Sault Ste Marie, Ontario. Kathryn and Matthew Armstrong,
     a mother and son duo, will take care of all your needs and make sure that you
-    leave hearing and feeling better than ever.
+    leave hearing and feeling better than ever.</p>"
 - template: blockquote
   text: The sound and music are 50% of the entertainment in a movie.
 - template: image-with-caption
@@ -53,11 +54,6 @@ page_sections:
   imageAlt: Mother and son at Armstrong hearing
   fullBleed: false
   imageCaption: Mother and son at Armstrong hearing
-- template: text-area
-  text: |-
-    With only one clinic to run and operate, we promise to give you our full professional attention from the moment you think you need an appointment, through consultations, fittings, repairs and more.
-
-    Our patients become family members that we treat with the utmost respect and care.
 - template: text-area
   text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu mauris
     auctor, tempor enim in, dignissim odio. Morbi suscipit augue eu mattis dapibus.

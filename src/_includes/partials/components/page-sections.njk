@@ -21,8 +21,15 @@
             fullBleed: block.fullBleed
         }) }}
 
+    {% elseif block.template === 'service-cards' %}
+        {{ component('service-roll-up', {
+            serviceCardItems: collections.services,
+            serviceHeading: block.serviceHeading
+        }) }}
+
     {% elseif block.template === 'bio-cards' %}
         {{ component('bio-cards', {
+            heading: block.heading,
             bioCards: block.bioCards
         }) }}
 

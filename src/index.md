@@ -8,21 +8,12 @@ bannerSummary: We’re dedicated to identifying hearing loss and ear-related dis
   and providing appropriate hearing solutions whether through hearing aids, assistive
   listening devices, hearing protection or rehabilitation counselling.
 bannerImage: "/images/banner.png"
-serviceHeading: Hearing Services
-serviceButtonText: View all services
-serviceButtonPath: '/services'
-panelTitle1: Infant Hearing Program
-panelImage1: "/images/kids.png"
-panelImageDescription1: kids playing
-panelSummary1: Kathryn Armstrong is a Northern Ontario representative for the Infant
-  Hearing Program. The Infant Hearing Program (IHP) is an early hearing detection
-  and intervention (EHDI) program which includes; universal newborn hearing screening,
-  surveillance screening of infants and children identified as having a risk factor(s)
-  for late onset or progressive hearing loss, hearing assessment, intervention for
-  infants and children identified with permanent hearing loss and family support.
-panelButtonText1: Read the story
-panelButtonPath1: "/services"
-panelImagePosition1: right
+# serviceHeading: Hearing Services
+# serviceButtonText: View all services
+# serviceButtonPath: '/services'
+
+
+
 panelTitle2: Locally owned and operated
 panelImage2: "/images/location.png"
 panelImageDescription2: Armstrong Hearing Office
@@ -33,6 +24,32 @@ panelSummary2: We, Matthew and Kathryn Armstrong, are the proud owners of Armstr
 panelButtonText2: Let's talk
 panelButtonPath2: "/contact"
 panelImagePosition2: left
+
+
+page_sections:
+- template: service-cards
+  serviceHeading: Hearing Services
+  serviceButtonText: View all services
+  serviceButtonPath: '/services'
+
+- template: image-text-panel
+  title: Infant Hearing Program
+  summary: Kathryn Armstrong is a Northern Ontario representative for the Infant Hearing Program. The Infant Hearing Program (IHP) is an early hearing detection and intervention (EHDI) program which includes; universal newborn hearing screening, surveillance screening of infants and children identified as having a risk factor(s) for late onset or progressive hearing loss, hearing assessment, intervention for infants and children identified with permanent hearing loss and family support.
+  imagealt: kids playing
+  imageURL: "/images/kids.png"
+  imagePosition: right
+  buttonText: Read the story
+  buttonPath: "/resources/infant-hearing-program"
+
+- template: image-text-panel
+  title: Locally owned and operated
+  summary: We, Matthew and Kathryn Armstrong, are the proud owners of Armstrong Hearing; an Audiology and Hearing Aid Clinic committed to helping those hard of hearing. We are located in central-downtown Sault Ste. Marie, Ontario with easy access, handicap accesible, and spacious parking.
+  imagealt: Armstrong Hearing Office
+  imageURL:  "/images/location.png"
+  imagePosition: left
+  buttonText: Let's talk
+  buttonPath: "/contact"
+
 
 ---
 <!-- do not delete -->
