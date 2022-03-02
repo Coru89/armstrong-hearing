@@ -22,9 +22,10 @@ fields:
   type: blocks
   label: Page Sections
   template_types:
+  - image-text-panel
+  - cards-with-icon
   - text-area
   - image-with-caption
-  - image-text-panel
   config:
     min: 
     max: 
