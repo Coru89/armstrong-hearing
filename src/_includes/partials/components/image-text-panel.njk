@@ -5,10 +5,13 @@
     {% set colorHexCard = 'transparent' %}
 {% elseif props.backgroundColor === 'grey' %}
     {% set colorHexPanel = 'var(--color-grey-light)' %}
-        {% set colorHexCard = 'transparent' %}
+    {% set colorHexCard = 'transparent' %}
 {% elseif props.backgroundColor === 'green' %}
   {% set colorHexPanel = 'var(--color-theme-primary)' %}
   {% set colorHexCard = 'var(--color-white)' %}
+{% elseif props.backgroundColor === 'light green' %}
+  {% set colorHexPanel = 'var(--color-bg-light);' %}
+  {% set colorHexCard = 'transparent' %}
 {% else %}
     {% set colorHexPanel = 'var(--color-white)' %}
     {% set colorHexCard = 'transparent' %}

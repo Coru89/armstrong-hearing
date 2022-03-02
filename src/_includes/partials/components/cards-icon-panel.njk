@@ -1,20 +1,16 @@
 {% if props.backgroundColor === 'white' %}
   {% set colorHexPanel = 'var(--color-white)' %}
-    {% set colorHexCard = 'transparent' %}
 {% elseif props.backgroundColor === 'grey' %}
     {% set colorHexPanel = 'var(--color-grey-light)' %}
-        {% set colorHexCard = 'transparent' %}
-{% elseif props.backgroundColor === 'green' %}
-  {% set colorHexPanel = 'var(--color-theme-primary)' %}
-  {% set colorHexCard = 'var(--color-white)' %}
+{% elseif props.backgroundColor === 'light green' %}
+  {% set colorHexPanel = 'var(--color-bg-light);' %}
 {% else %}
     {% set colorHexPanel = 'var(--color-white)' %}
-    {% set colorHexCard = 'transparent' %}
 {% endif %}
 
 {% if props.cards.length %}
-  <section class="cards-icon-roll-up">
-    <div class="cards-icon-roll-up__inner" style="background-color: {{colorHex}};">
+  <section class="cards-icon-roll-up" style="background-color: {{colorHexPanel}};">
+    <div class="cards-icon-roll-up__inner">
       <h2 class="cards-icon-roll-up__heading">{{ props.heading }}</h2>
       <div class="cards-icon-roll-up__items" reversed>
         {% for item in props.cards %}
