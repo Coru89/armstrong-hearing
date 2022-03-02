@@ -46,3 +46,18 @@ fields:
   config:
     maxSize: 5
   label: imageURL
+- name: backgroundColor
+  type: select
+  default: white
+  config:
+    required: false
+    options:
+    - white
+    - green
+    - grey
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Background Color
