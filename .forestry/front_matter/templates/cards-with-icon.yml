@@ -9,10 +9,13 @@ fields:
   label: Panel Heading
 - name: backgroundColor
   type: select
-  default: []
+  default: white
   config:
     required: false
-    options: []
+    options:
+    - white
+    - grey
+    - green
     source:
       type: simple
       section: 
