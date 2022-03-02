@@ -15,7 +15,7 @@ fields:
     options:
     - white
     - grey
-    - green
+    - light green
     source:
       type: simple
       section: 
