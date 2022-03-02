@@ -36,6 +36,11 @@ fields:
     config:
       required: false
     label: summary
+  - name: icon
+    type: text
+    config:
+      required: false
+    label: Icon
   config:
     min: 
     max: 4
