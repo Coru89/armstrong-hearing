@@ -87,5 +87,15 @@ fields:
       file: 
       path: 
   label: Panel Image Position 2
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - text-area
+  - image-with-caption
+  - image-text-panel
+  config:
+    min: 
+    max: 
 pages:
 - src/index.md
