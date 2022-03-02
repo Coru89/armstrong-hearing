@@ -7,6 +7,18 @@ fields:
   config:
     required: false
   label: Panel Heading
+- name: backgroundColor
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Panel Background Color
 - name: buttonText
   type: text
   config:
