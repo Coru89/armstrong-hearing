@@ -1,4 +1,9 @@
 ---
 label: Cards with icon
 hide_body: true
-fields: []
+fields:
+- name: serviceHeading
+  type: text
+  config:
+    required: false
+  label: Service Heading
