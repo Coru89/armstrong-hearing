@@ -23,7 +23,7 @@ page_sections:
   heading: Hearing Services
   buttonText: View all services
   buttonPath: "/services"
-  backgroundColor: grey
+  backgroundColor: green
   cards:
   - title: Hearing Assessments
     summary: Comprehensive audiological evaluations by a licensed and certified audiologist
