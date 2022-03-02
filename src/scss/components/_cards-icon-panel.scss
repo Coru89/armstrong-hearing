@@ -1,4 +1,4 @@
-.service-roll-up {
+.cards-icon-roll-up {
     padding: 3.25rem 0;
 
     &__inner {
@@ -50,8 +50,8 @@
     &__link {
         display: grid;
         grid-auto-rows: 1fr;
-        text-decoration: none;
         padding-bottom: 3rem;
+        text-decoration: none;
     }
 }
 

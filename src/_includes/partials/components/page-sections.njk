@@ -7,7 +7,8 @@
         buttonPath: block.buttonPath,
         imageURL: block.imageURL,
         imageAlt: block.imagealt,
-        imagePosition: block.imagePosition
+        imagePosition: block.imagePosition,
+        backgroundColor: block.backgroundColor
     }) }}
     
     {% elseif block.template === 'text-area' %}
@@ -21,10 +22,13 @@
             fullBleed: block.fullBleed
         }) }}
 
-    {% elseif block.template === 'service-cards' %}
-        {{ component('service-roll-up', {
-            serviceCardItems: collections.services,
-            serviceHeading: block.serviceHeading
+    {% elseif block.template === 'cards-with-icon' %}
+        {{ component('cards-icon-panel', {
+            cards: block.cards,
+            heading: block.heading,
+            buttonText: block.buttonText,
+            buttonPath: block.buttonPath,
+            backgroundColor: block.backgroundColor
         }) }}
 
     {% elseif block.template === 'bio-cards' %}

@@ -2,7 +2,7 @@
 title: Who we are
 permalink: "/who-we-are/index.html"
 layout: layouts/page.njk
-bannerSummary: 
+bannerSummary: A family owned Audiology & Hearing Aid Clinic in Sault Ste Marie
 bannerImage: "/images/banner.png"
 page_sections:
 - template: image-text-panel
@@ -16,7 +16,7 @@ page_sections:
     more. Our patients become family members that we treat with the utmost respect
     and care.
   imagealt: Armstrong Hearing Office
-  imageURL: "/images/location.png"
+  imageURL: "/images/armstrongs.png"
   imagePosition: right
   buttonText: Say Hello :)
   buttonPath: "/contact"
