@@ -7,3 +7,37 @@ fields:
   config:
     required: false
   label: Service Heading
+- name: buttonText
+  type: text
+  config:
+    required: false
+  label: buttonText
+- name: buttonPath
+  type: text
+  config:
+    required: false
+  label: buttonPath
+- name: cards
+  type: field_group_list
+  fields:
+  - name: linkPath
+    type: text
+    config:
+      required: false
+    label: Link Path
+    description: e.g. "/contact"
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: summary
+    type: text
+    config:
+      required: false
+    label: summary
+  config:
+    min: 
+    max: 4
+    labelField: 
+  label: Cards
