@@ -25,6 +25,11 @@ page_sections:
   buttonPath: "/services"
   backgroundColor: grey
   cards:
+  - title: Hearing Assessments
+    summary: Comprehensive audiological evaluations by a licensed and certified audiologist
+      (no referral necessary).
+    linkPath: "/services/hearing-assessment"
+    icon: star
   - linkPath: "/services/hearing-aids"
     title: Hearing Aids
     summary: Hearing Aid selection, repairs, batteries, and advice to meet individual
