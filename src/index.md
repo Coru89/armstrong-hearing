@@ -25,11 +25,6 @@ page_sections:
   buttonPath: "/services"
   backgroundColor: grey
   cards:
-  - title: Third Party Claims
-    summary: Authorizer and vendor for WSIB, Veterans Affairs, NIHB and most third
-      party insurances.
-    linkPath: "/services/third-party-claims"
-    icon: star
   - title: Hearing Assessments
     summary: Comprehensive audiological evaluations by a licensed and certified audiologist
       (no referral necessary).
@@ -43,6 +38,11 @@ page_sections:
   - linkPath: "/services/assitive-devices"
     title: Assitive Devices
     summary: Infant hearing screenings and assessments
+    icon: star
+  - title: Third Party Claims
+    summary: Authorizer and vendor for WSIB, Veterans Affairs, NIHB and most third
+      party insurances.
+    linkPath: "/services/third-party-claims"
     icon: star
 - template: image-text-panel
   title: Infant Hearing Program
