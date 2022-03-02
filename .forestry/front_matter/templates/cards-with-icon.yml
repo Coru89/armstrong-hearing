@@ -2,11 +2,11 @@
 label: Cards with icon
 hide_body: true
 fields:
-- name: serviceHeading
+- name: heading
   type: text
   config:
     required: false
-  label: Service Heading
+  label: Panel Heading
 - name: buttonText
   type: text
   config:
