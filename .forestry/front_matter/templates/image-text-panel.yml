@@ -55,9 +55,10 @@ fields:
     - white
     - green
     - grey
+    - light green
     source:
       type: simple
       section: 
       file: 
       path: 
-  label: Background Color
+  label: Panel Background Color
