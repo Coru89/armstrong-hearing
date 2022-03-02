@@ -11,12 +11,12 @@ fields:
   type: text
   config:
     required: false
-  label: buttonText
+  label: Button Text
 - name: buttonPath
   type: text
   config:
     required: false
-  label: buttonPath
+  label: Button Path
 - name: cards
   type: field_group_list
   fields:
