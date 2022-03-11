@@ -29,5 +29,10 @@ fields:
   config:
     min: 
     max: 
+- name: bannerimage
+  type: file
+  config:
+    maxSize: 64
+  label: bannerImage
 pages:
 - src/index.md
