@@ -24,7 +24,7 @@ fields:
   label: SEO Image
 - type: text
   name: title
-  label: Hero Title
+  label: Banner Title
 - name: bannerSummary
   type: textarea
   default: ''
@@ -46,3 +46,8 @@ fields:
   config:
     min: 
     max: 
+- name: banner_image
+  type: file
+  config:
+    maxSize: 64
+  label: Banner Image
