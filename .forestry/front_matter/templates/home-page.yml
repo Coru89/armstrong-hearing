@@ -16,8 +16,8 @@ fields:
   name: title
   label: Hero Title
 - type: textarea
-  name: heroSummary
-  label: Hero Summary
+  name: bannerSummary
+  label: Banner Summary
 - name: page_sections
   type: blocks
   label: Page Sections
