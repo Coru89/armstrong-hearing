@@ -14,10 +14,10 @@ fields:
   label: SEO Image
 - type: text
   name: title
-  label: Heading Title
+  label: Hero Title
 - type: textarea
   name: heroSummary
-  label: Heading Summary
+  label: Hero Summary
 - name: page_sections
   type: blocks
   label: Page Sections
