@@ -75,6 +75,7 @@ page_sections:
   imagAlt: ''
   imageurl: ''
 heroSummary: ''
+bannerimage: "/images/banner.png"
 
 ---
 <!-- do not delete -->
