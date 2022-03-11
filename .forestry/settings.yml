@@ -14,11 +14,15 @@ sections:
   label: Services
   create: all
   match: "*.md"
+  templates:
+  - page
 - type: directory
   path: src/content/resources
   label: Resources
   create: all
   match: "*.md"
+  templates:
+  - page
 - type: directory
   path: src/content/pages
   label: Pages
