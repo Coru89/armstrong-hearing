@@ -136,14 +136,14 @@ figure,
 pre > code,
 .video-player,
 video {
-  max-width: 58rem;
+  max-width: 52rem;
   margin-left: 50%; /*changing this value to 47% removes the horizontal scrollbar once the viewport is < 930px */
   position: relative;
   transform: translateX(
     -50%
   ); /* changing this value to 49% allows for the suggestion above to also eliminate the horizontal scroll. */
 
-  width: 100vw;
+  width: calc(100vw - 3rem);
 }
 
 figure img,
@@ -162,7 +162,7 @@ figcaption {
   font-size: 0.8em;
   font-style: italic;
   margin: 0.5rem auto 0 auto;
-  max-width: 58rem;
+  max-width: 52rem;
   padding: 0 get-size(500);
 }
 

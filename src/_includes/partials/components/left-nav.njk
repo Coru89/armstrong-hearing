@@ -1,0 +1,22 @@
+<aside class="left-nav">
+    <h2 class="left-nav__title">More {{props.leftNavFilter}}</h2>
+    <ul class="left-nav__list">
+        {% for item in props.navigationItems | subNav(props.leftNavFilter) %}
+            {% set relAttribute = '' %}
+            {% set currentAttribute = '' %}
+            {% set currentClass = '' %}
+
+            {% if item.rel %}
+                {% set relAttribute = ' rel="' + item.rel + '"' %}
+            {% endif %}
+
+            {% if page.url == (item.url + '/') %}
+                {% set currentAttribute = ' aria-current="page"' %}
+                {% set currentClass = 'left-nav__item--active' %}
+            {% endif %}
+            <li class="left-nav__item{% if item.items %} left-nav__item--has-level-2{% endif %} {{ currentClass | safe }}">
+                <a class="left-nav__item-link" href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}><span class="left-nav__item-link-text">{{ item.text }}</span></a>
+            </li>
+        {% endfor %}
+    </ul>
+</aside>

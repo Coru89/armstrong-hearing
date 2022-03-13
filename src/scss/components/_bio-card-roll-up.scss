@@ -1,15 +1,15 @@
 .bio-card-roll-up {
-    padding: 0 0 6rem;
+    padding: 0 0 6rem !important;
 
     &__inner {
         margin: auto;
-        max-width: 58rem;
+        max-width: 52rem;
         text-align: center;
     }
 
     &__heading {
         font-weight: 500;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
     }
 
     &__items {
@@ -59,6 +59,10 @@
 
     &__image-wrapper {
         padding: 1.5rem 1rem 0;
+    }
+
+    picture {
+        background: var(--color-bg-light);
     }
 
 }

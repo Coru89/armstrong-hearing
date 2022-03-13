@@ -52,14 +52,12 @@ page_sections:
     screening of infants and children identified as having a risk factor(s) for late
     onset or progressive hearing loss, hearing assessment, intervention for infants
     and children identified with permanent hearing loss and family support.
-  imagealt: kids playing
+  imageAlt: kids playing
   imageURL: "/images/kids.png"
   imagePosition: right
   buttonText: Read the story
   buttonPath: "/resources/infant-hearing-program"
   backgroundColor: green
-  imagAlt: ''
-  imageurl: ''
 - template: image-text-panel
   title: Locally owned and operated
   summary: We, Matthew and Kathryn Armstrong, are the proud owners of Armstrong Hearing;

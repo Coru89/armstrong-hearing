@@ -17,7 +17,7 @@
     {% set colorHexCard = 'transparent' %}
 {% endif %}
 
-<section class="image-text-panel" style="background-color: {{colorHexPanel}};">
+<section class="image-text-panel{% if props.fullBleed === true %} full-bleed{% endif %}" style="background-color: {{colorHexPanel}};">
   <div class="image-text-panel__inner" style="background-color: {{colorHexCard}};">
       <div class="image-text-panel__image{% if props.imagePosition === 'right' %} image-text-panel__image--reverse{% endif %}">
       {% if props.imageURL.length %}

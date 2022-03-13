@@ -6,17 +6,22 @@
 
 {% block content %}
   <main id="main-content" tabindex="-1">
-
     {{ component('hero', {
       heroHeading: title,
       heroSummary: bannerSummary,
       heroImage: bannerImage
     }) }}
-    <div class="page__body">
-      {{ content | safe }}
-      {% include 'partials/components/page-sections.njk' %}
-    </div>
-
+    <article class="page{% if leftNavFilter.length %} page--left-nav{% endif %}">
+      <div class="page__body">
+        {% include 'partials/components/page-sections.njk' %}
+          {% if leftNavFilter.length %}
+            {{ component('left-nav', {
+              navigationItems: navigation.items,
+              leftNavFilter: leftNavFilter
+            }) }}
+          {% endif %}
+      </div>
+    </article>
   </main>
 {% endblock %}
 

@@ -54,5 +54,15 @@ page_sections:
   buttonText: hello
   buttonPath: "/services"
   fullBleed: true
-
+- template: image-with-caption
+  image: "/images/banner2.png"
+  imageCaption: Happy couple
+  imageAlt: Happy couple
+- template: image-with-caption
+  image: "/images/banner.png"
+  imageCaption: Happy couple
+  imageAlt: Happy couple
+  fullBleed: true
+- template: blockquote
+  text: what is love, baby dont hurt me
 ---

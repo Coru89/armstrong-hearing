@@ -8,14 +8,14 @@ page_sections:
 - template: bio-cards
   heading: Meet the team
   bioCards:
-  - photo: "/images/kathryn-armstrong.jpg"
+  - photo: "/images/kathryn-armstrong.png"
     photoAlt: Kathryn Armstrong
     name: Kathryn Armstrong
     title: Audiologist | M.A., Reg. CASLPO
     email: kathryn@armstronghearing.ca
     phone: "+17052537111"
     phoneDisplay: "(705) 253-7111"
-  - photo: "/images/matthew-armstrong.jpg"
+  - photo: "/images/matthew-armstrong.png"
     photoAlt: Matthew Armstrong
     name: Matthew Armstrong
     title: Hearing Instrument Specialist | Reg. A.H.I.P.
