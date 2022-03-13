@@ -59,5 +59,7 @@ page_sections:
   image: "/images/banner2.png"
   imageCaption: Happy couple
   imageAlt: Happy couple
+- template: blockquote
+  text: what is love, baby dont hurt me
 
 ---
