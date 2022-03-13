@@ -55,5 +55,9 @@ page_sections:
   imagAlt: kids playing
   buttonText: hello
   buttonPath: "/services"
+- template: image-with-caption
+  image: "/images/banner2.png"
+  imageCaption: Happy couple
+  imageAlt: Happy couple
 
 ---
