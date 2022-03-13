@@ -78,14 +78,6 @@
             margin-right: 0;
           }
         }
-
-        blockquote {
-          margin-left: 1.5rem;
-
-          @include media-query(xl) {
-            margin-left: 0;
-          }
-        }
       }
     }
   }
