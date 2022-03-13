@@ -8,6 +8,7 @@ rollupImageAlt:
 rollupSummary: Lorem ipsum dolor sit amet consectetur adipisicing elit.
 bannerSummary: Lorem ipsum dolor sit amet consectetur adipisicing elit.
 bannerImage: "/images/banner.png"
+leftNavFilter: Resources
 page_sections:
 - template: text-area
   text: "<p>Sed tristique lorem malesuada, laoreet mi vitae, efficitur velit. Nullam
@@ -40,20 +41,18 @@ page_sections:
 - template: image-text-panel
   backgroundColor: light green
   imagePosition: left
-  imageurl: "/images/kids.png"
+  imageURL: "/images/kids.png"
   summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis turpis
     et sem feugiat mattis. Pellentesque libero dui, fringilla sed metus sit amet,
     hendrerit malesuada nunc. Quisque non dapibus nisi. Phasellus imperdiet vestibulum
     nibh eget accumsan. Curabitur eu eros sapien. Nunc dapibus eleifend dolor eget
     egestas. Ut at hendrerit erat. Cras ut neque id quam convallis fermentum. Integer
     non leo massa. Vestibulum ante nisl, efficitur quis faucibus id, convallis nec
-    magna. Praesent metus quam, varius nec consectetur in, varius at ex. Vestibulum
-    ut erat felis. Vivamus hendrerit tellus aliquet ante auctor porttitor. Integer
-    euismod, eros sit amet eleifend tempor, sem orci pellentesque ligula, et dictum
-    sapien nisi ut ligula.
+    magna.
   title: Hello
-  imagAlt: kids playing
+  imageAlt:
   buttonText: hello
   buttonPath: "/services"
+  fullBleed: true
 
 ---
